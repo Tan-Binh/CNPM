@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*banner begin*/
+.banner {
+    width: 100%;
+    margin-top: 110px;
+    padding: 20px 0px;
+    text-align: center;
+    background: white;
+}
+.banner img {
+    width: 1300px;
+}
+/*banner end*/
+
+/*Liên hệ begin*/
+.lienhe
+{
+    font-size: 20px;
+    background-image: url(../images/image12.png);
+    background-size: cover;
+    padding: 20px 15% 40px 15%;
+}
+.lienhe_content
+{
+    width: 100%;
+    padding-top:10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    margin-top: 4%;
+    padding-bottom:10px;
+}
+.form_lienhe
+{  
+    margin: auto 10%;
+}
+.form_lienhe h3,
+.form_lienhe p
+{  
+    margin-left: 15%;
+}
+.form_lienhe .lienlac
+{
+    font-style: italic;
+    font-size: 15px;
+}
+.form_lienhe .input_hvt
+{
+    margin-left:15%;
+    border-radius: 5px;
+    border: none;
+    width: 70%;
+    height: 65px;
+    font-size: 20px;
+}
+.form_lienhe .input_tel,
+.form_lienhe .input_email,
+.form_lienhe .input_khoahoc
+{
+    border-radius: 5px;
+    border: none;
+    margin-left:15%;
+    font-size: 20px;
+    width: 70%;
+    margin-top:10px;
+    height: 65px;
+}
+.form_lienhe .input_khoahoc:invalid
+{
+    color: gray;
+}
+.form_lienhe .input_btn
+{
+    box-shadow: 3px 3px 1px 1px grey;
+    font-size: 20px;
+    color: white;
+    border-radius: 30px;
+    background-color: #59BCC2;
+    margin-left: 20%;
+    width: 60%;
+    margin-top:15px;
+    height: 76px;
+}
+/*Liên hệ end*/

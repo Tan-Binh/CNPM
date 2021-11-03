@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+footer{
+    width: 100%;
+    height: 220px;
+    padding: 20px 0px;
+    background-image: linear-gradient(to right,rgb(10,85,159),rgb(58,158,197));
+    color:white;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+footer .logo_footer
+{
+    width: 400px;
+    padding-top: 60px;
+    display: inline-block;
+    text-align: center;
+}
+footer .title_1
+{
+    color: rgb(195,238,241);
+}
+footer .Thongtin
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 650px;
+}
+footer .Thongtin .anchor1{
+    color:white;
+    text-decoration: none;
+}
+footer .Thongtin .anchor1:hover{
+    color: grey;
+}
+footer .Thongtin .icon1
+{
+    color:rgb(195,238,241);
+}
+footer .Ketnoi
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+}
+footer .Ketnoi .images1{
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.hr_white
+{
+    width: 35px;
+    margin-left:0px;
+    margin-right:-5px;
+    padding: 0;
+    display: inline-block;
+    border: 1.5px white solid;
+    background-color: white;
+}
+hr { margin: 0.1em auto; }
+.hr_blue
+{
+    width: 300px;
+    margin-left:0px;
+    margin-right:0px;
+    padding: 0;
+    display: inline-block;
+    background-color: white;
+    border: 0.5px white solid;
+}
+.hr_footer
+{
+    margin: 15px 0px;
+    background-color: white;
+    border: 1px white solid;
+}
+.footer_copyright
+{
+    font-size: 14px;
+    text-align: center;
+}
