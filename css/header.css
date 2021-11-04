@@ -14,7 +14,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1; /* header sẽ nổi lên tầng 1 nên cuộn sẽ ko bị trôi*/
+    z-index: 2; /* header sẽ nổi lên tầng 1 nên cuộn sẽ ko bị trôi*/
 }
 header a {
     color: white;
