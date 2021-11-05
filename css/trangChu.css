@@ -138,6 +138,89 @@ html {
 }
 /*Khóa học end*/
 
+/*Sensei begin*/
+.trangchu_sensei
+{
+    
+    background-image: url(../images/sensei/Đội\ ngũ\ sensei\ \(1\).png);
+    width: 100%;
+    height: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.sensei_1
+{
+    box-shadow: 3px 4px 5px 1px rgba(67, 130, 188, 0.56), 
+                 inset 3px 4px 5px 1px rgba(67, 130, 188, 0.56);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    width:18% ;
+    margin-top: 12%;
+    margin-left: 18%;
+    padding: 1%;
+}
+.sensei_2
+{
+    background-color: white;
+    box-shadow: 3px 4px 5px 1px rgba(67, 130, 188, 0.56), 
+    inset 3px 4px 5px 1px rgba(67, 130, 188, 0.56);
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    width:18%;
+    margin-bottom: 5%;
+    vertical-align: top;
+    padding: 1%;
+   
+}
+.gioithieu_sensei
+{
+    margin-left: 5%;
+    margin-top: 7%;
+    vertical-align: top;
+    display: inline-block;
+    width:30%;
+    font-size: 150%;
+}
+.gioithieu_sensei_title
+{
+    text-align: center;
+    color:#4382BC;
+
+}
+.gioithieu_sensei_content_btn
+{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 120%;
+    margin-left: 15%;
+    width: 48%;
+    height: 26%;
+    background: #FFFFFF;
+    border: 3px solid #1C71AD;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.gioithieu_sensei_anchor
+{
+    text-decoration: none;
+    font-style: none;
+    color: #4382BC;
+}
+.gioithieu_sensei_content
+{
+    margin-top: 10%;
+}
+.grey_hr
+{
+width:80%;
+border: solid grey 10%;
+background-color: grey;
+}
+/*Sensei end*/
 /*Văn hóa begin*/
 .trangchu_vanhoa
 {
