@@ -18,7 +18,7 @@ html {
     background: white;
 }
 .banner img {
-    width: 1300px;
+    width: 90%;
 }
 /*banner end*/
 
@@ -49,17 +49,15 @@ html {
 .khoa_hoc .content .select p {
     margin: 5px 0px 5px 20% ;
     padding: 7px;
+    background: white;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     box-sizing: border-box;
-    color: white;
+    color: #1C71AD;
     font-size: 27px;
     font-weight: bold;
     text-align: center;
-}
-.khoa_hoc .content .select p:hover {
-    background: white;
-    color: #1C71AD;
+    cursor: pointer;
 }
 .khoa_hoc .content .list {
     width: 65%;
@@ -68,10 +66,13 @@ html {
     display: flex;
 }
 .khoa_hoc .content .list .element {
+    top: 30%;
+    right: 30%;
     margin: 0px 20px ;
     padding: 0px 7px ;
     background: white;
     box-shadow: 0px 2px 5px gray;
+    box-sizing: border-box;
     color: #666666;
     font-size: 25px;
 }
