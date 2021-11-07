@@ -1,9 +1,9 @@
-.dangnhap
+.dangki
 {
     width: 100%;
     height: 100%;
 }
-.dangnhap_input
+.dangki_input
 {
     border: none;
     font-size: 18px;
@@ -11,18 +11,15 @@
     margin-top: 0;
     vertical-align: 10px;
 }
-.dangnhap_anchor:visited{
-    color: #868585;
-}
-.dangnhap_hr
+.dangki_hr
 {
     width: 60%;
     color:#318FB5
 }
-.dangnhap_form
+.dangki_form
 {   
-    background-image:url(../images/dangnhap/nendangnhap.png);
-    background-size: 100% 150%;
+    background-image:url(../images/dangki/nendangki.png);
+    background-size: contain;
     margin: 10% 20% 10% 20%;
     background-repeat: no-repeat;
     padding-left: 15%;
@@ -32,14 +29,14 @@
     width: 50%;
     
 }
-.dangnhap_for
+.dangki_for
 {   
-    width: 66%;
+    width: 80%;
     height: 100%;
     margin-left: 35%;
     padding-right: 10%;
 }
-.dangnhap_inline1
+.dangki_inline
 {
     text-align: center;
     width: 50%;
@@ -50,17 +47,20 @@
     color: #318FB5;
     
 }
-.dangnhap_inline
+.dangki_anchor:visited{
+    color: #868585;
+}
+.dangki_inline1
 {
     text-align: center;
-    width: 47%;
+    width: 35%;
     display: inline-block;
-
     margin-bottom: 5%;
     font-size: 200%;
-    color: #318FB5;
+    opacity:45%;
+    
 }
-.dangnhap_khung
+.dangki_khung
 {
     border:1px solid black;
     width: 80%;
@@ -82,23 +82,11 @@
     height: 38px;
     display: inline-block;
   }
-.dangnhap_quenmatkhau
-{
-    display: inline;
-    margin-left: 20%;
-    font-style: normal;
-    text-decoration: none;
-}
-.remember
-{
-    display: inline;
-}
-.dangnhap_btn
+.dangki_btn
 {
     text-align: center;
-    margin-top: 4%;
-    margin-left: 8%;
-    padding: 10px;
+    
+    margin-left: 10%;
     position: absolute;
     width: 8%;
     height: 6%;
@@ -114,20 +102,14 @@
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-    
+}
+.dangki_anchor
+{
+    font-style: normal;
+    text-decoration: none;
 }
 .btn_text
 {
     width: 100%;
     text-align: center;
-}
-.dangnhap_ghinho
-{
-    color: #575454;
-    font-size: 13px;
-}
-.dangnhap_anchor
-{
-    font-style: normal;
-    text-decoration: none;
 }
