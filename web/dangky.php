@@ -49,7 +49,7 @@
 </head>
 <body>
     <header>
-        <a class="logo_header" href="../index.html">
+        <a class="logo_header" href="../index.php">
             <img src="../images/header/logoHeader.png" alt="">
         </a>
         <nav class="content_list">
@@ -71,6 +71,7 @@
     </header>
 
     <section id="dangki">
+    <?php $validate_msg=""?>
         <div class="dangki_form">
             <form class="dangki_for"  id="formID" action="../php_xuly/dangky_xuly.php" method="Post">
                 <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.php">Đăng nhập</a><hr class="dangnhap_hr"></h3>
@@ -85,9 +86,25 @@
                 <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
                 <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
                 <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu "> </div>
-                <input type="submit" value="Đăng kí" name="register" id="register" class="dangki_btn">
+                <input type="submit" value="Đăng kí" name="register" id="register" class="dangki_btn"/>
+                <div id = "result" ><?PHP
+                    $thongbao="";
+                  if ( isset($_GET['email_found']) && $_GET['email_found'] == 1 )
+                  {
+                     $thongbao="Đã tồn tại email";
+                  } 
+                  if ( isset($_GET['username_found']) && $_GET['username_found'] == 1 )
+                  {
+                     $thongbao="Đã tồn tại tên tài khoản";
+                  } 
+                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
+                  {
+                     $thongbao="Đăng ký thành công, bạn có thể đăng nhập tài khoản";
+                  } 
+                    echo '<span style="color: #F52000; font-weight:bold;font-style:italic;padding-left:80px">'.$thongbao.'</span>'; ?></div>
                 </div>
             </form>
+
         </div>
     </section>
 
@@ -117,6 +134,12 @@
         </div>
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
+        <div class="dialog_overlay" id="dialog_overlay">
+            <div class="dialog-body">
+                <h3 id="dialog_title"></h3>
+                <p id="dialog_content"></p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

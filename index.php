@@ -10,12 +10,37 @@
     <link rel="stylesheet" href="./css/trangChu_style.php">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>fuji nihongo</title>
+    <script>
+         $(document).ready(function() 
+        {
+        $("#tuvan").click(function() 
+        {
+        var name = $("#hvt").val();
+        var email = $("#email").val();
+        var tel= $("#tel").val();
+        var e = document.getElementById("khoahoc");
+        var khoahoc=e.value;
+        if (name == '' || tel  == ''||email == ''||  khoahoc == "1") 
+        {
+        alert("Mời bạn nhập đầy đủ thông tin");
+        $('#lienhe').attr('onSubmit','return false');
+        } 
+        else
+        {
+            $('#lienhe').attr('onSubmit','return true')}
+        })
+        $('#lienhe').attr('onSubmit','return false');
+        });
+    </script>
+
 </head>
 <body>
+
     <header>
-        <a class="logo_header" href="./index.html">
+        <a class="logo_header" href="./index.php">
             <img src="./images/header/logoHeader.png" alt="">
         </a>
         <nav class="content_list">
@@ -37,6 +62,7 @@
     </header>
     
     <section class="banner">
+    
         <img src="./images/banner/banner.png" alt="">
     </section>
 
@@ -223,24 +249,25 @@
 
     <section class="lienhe">
         <div class="lienhe_content">
-            <form class="form_lienhe">
+            <form class="form_lienhe" action="php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
                 <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
                 <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
-                <br><input type="text" class="input_hvt" name="" placeholder="Nhập họ và tên">
-                
-                <br><input type="tel" class="input_tel" name="" placeholder="Nhập số điện thoại">
-                <br><input type="email" class="input_email" name="" placeholder="Nhập email">
+                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên">
+                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại">
+                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email">
                 <br>
-                <select name="khoahoc" class="input_khoahoc" required>
-                    <option value="" disabled selected hidden>Chọn khóa học muốn được tư vấn</option>
+                <select id="khoahoc" name="khoahoc" class="input_khoahoc">
+                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
                     <option value="N5">N5</option>
                     <option value="N4">N4</option>
                     <option value="N3">N3</option>
                     <option value="N2">N2</option>
                     <option value="N1">N1</option>
                 </select>
-                <br><input type="button" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn">
+                
+                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
             </form>
+           
         </div>
     </section>
 

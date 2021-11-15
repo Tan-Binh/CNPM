@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/dangnhap_style.php">
-    <link rel="stylesheet" href="../fontawesome/css/all.css">
-    <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/lienhe_style.php">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Đăng nhập</title>
+    <title>fuji nihongo</title>
     <script>
-        $(document).ready(function() 
+         $(document).ready(function() 
         {
-        $("#login").click(function() 
+        $("#tuvan").click(function() 
         {
-        var name = $("#username").val();
-        var password = $("#pwd").val();
-        if (name == '' || password == '') 
+        var name = $("#hvt").val();
+        var email = $("#email").val();
+        var tel= $("#tel").val();
+        var e = document.getElementById("khoahoc");
+        var khoahoc=e.value;
+        if (name == '' || tel  == ''||email == ''||  khoahoc == "1") 
         {
         alert("Mời bạn nhập đầy đủ thông tin");
-        $('#formID').attr('onSubmit','return false');
-        } ;
+        $('#lienhe').attr('onSubmit','return false');
+        } 
+        else
+        {
+            $('#lienhe').attr('onSubmit','return true')}
+        })
+        $('#lienhe').attr('onSubmit','return false');
         });
-        });
-    </script> 
+    </script>
+
 </head>
 <body>
-    <header>
+
+<header>
         <a class="logo_header" href="../index.php">
             <img src="../images/header/logoHeader.png" alt="">
         </a>
@@ -45,43 +55,50 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangky.php">Đăng kí</a></li>
+                <li><a href="dangnhap.php">Đăng nhập</a></li>
+                <li><a href="dangki.php">Đăng kí</a></li>
             </ul>
         </nav>
-    
     </header>
-    
-    <section id="dangnhap">
-        <div class="dangnhap_form">
-            <form class="dangnhap_for"  id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
-                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập<hr class="dangnhap_hr"></h3>
-                <nav class="dangnhap_inline1"><h3 ><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a><hr class="dangnhap_hr"></h3></nav>
-                <br><div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email"></div>
-                <br><div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangnhap_input" name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
-                <div class="remember">
-                    <input type="checkbox"  name="Ghi nhớ đăng nhập"  id="remember" value="1" >
-                    <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
-                    <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
-                <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
-                </div>
+
+
+    <section class="lienhe">
+        <div class="lienhe_content">
+            <form class="form_lienhe" action="../php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
+                <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
+                <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
+                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên">
+                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại">
+                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email">
                 <br>
-                <div id = "result" 
-                ><?PHP
+                <select id="khoahoc" name="khoahoc" class="input_khoahoc">
+                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
+                    <option value="N5">N5</option>
+                    <option value="N4">N4</option>
+                    <option value="N3">N3</option>
+                    <option value="N2">N2</option>
+                    <option value="N1">N1</option>
+                </select>
+                
+                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
+                <div id = "result" >
+    <?PHP
                     $thongbao="";
-                  if ( isset($_GET['user_found']) && $_GET['user_found'] == 0 )
+                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
                   {
-                     $thongbao="Tài khoản hoặc mật khẩu sai";
+                     $thongbao="Cảm ơn bạn đã liên hệ";
                   }
-                  echo '<span style="color: #F52000; font-weight:bold;padding-left:80px;font-style:italic">'.$thongbao.'</span>';
-                  ?>
-                </div>
+                  echo '<span style="color: #F52000; font-weight:bold;
+                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
+    ?>
+    
+    </div>
             </form>
+           
         </div>
     </section>
 
+ 
     <footer>
         <div class="logo_footer">
             <img src="../images/footer/logoFooter.png" alt="">
@@ -108,6 +125,13 @@
         </div>
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
+        <div class="dialog_overlay" id="dialog_overlay">
+            <div class="dialog-body">
+                <h3 id="dialog_title"></h3>
+                <p id="dialog_content"></p>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>

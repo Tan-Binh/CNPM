@@ -20,22 +20,22 @@ $submitemail = $_POST['email'];
 $email = filter_var($submitemail, FILTER_SANITIZE_EMAIL);
 $password = md5($_POST['pwd']);
 $register_date = date("Y-m-d H:i:s");
-if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE email='$email'"))>0)
+if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE username='$username'"))>0)
 {
-echo "Đã tồn tại email";
+  header("Location: ../web/dangky.php?username_found=1");
 }
 else
 {
-if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE username='$username'"))>0)
+if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE email='$email'"))>0)
 {
-echo "Đã tồn tại tài khoản";
+  header("Location: ../web/dangky.php?email_found=1");
 }
 else
 {
   $sql = " INSERT INTO dangky (username,tel, email, password, register_date) VALUES ('$username','$tel', '$email', '$password','$register_date')";
   if (mysqli_query($conn, $sql)) 
   {
-    echo "New record created successfully";
+    header("Location: ../web/dangnky.php?success=1");
   } else 
   {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

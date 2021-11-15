@@ -88,6 +88,7 @@ $border = '1px solid';
   }
 .dangki_btn
 {
+    margin-top:40px;
     text-align: center;
     position: absolute;
     margin-left: 10%;
@@ -117,4 +118,29 @@ $border = '1px solid';
 {
     width: 100%;
     text-align: center;
+}
+.dialog
+{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:10;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    visibility: hidden;
+}
+.overlay
+{
+    background-color:black;
+}
+.dialog_body
+{
+    max-width:400px;
+    postition:relative;
+    padding:16px;
+    background-color:white;
 }

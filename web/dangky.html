@@ -6,27 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/dangnhap_style.php">
+    <link rel="stylesheet" type="text/css"  href="../css/dangky_style.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Đăng nhập</title>
     <script>
         $(document).ready(function() 
         {
-        $("#login").click(function() 
+        $("#register").click(function() 
         {
         var name = $("#username").val();
+        var email = $("#email").val();
         var password = $("#pwd").val();
-        if (name == '' || password == '') 
+        var cpassword = $("#cnfpwd").val();
+        var tel= $("#tel").val();
+        if (name == '' || email == '' || password == '' || cpassword == '' ||tel  == '') 
         {
-        alert("Mời bạn nhập đầy đủ thông tin");
+      
         $('#formID').attr('onSubmit','return false');
-        } ;
+        } 
+        else if ((password.length) < 8) 
+        {
+        alert("Mật khẩu phải từ 8 kí tự trở lên");
+        $('#formID').attr('onSubmit','return false');
+        } 
+        else
+        {
+         if (password!=cpassword)
+        {
+            alert("Nhập lại mật khẩu không trùng");
+            $('#formID').attr('onSubmit','return false');
+        }
+        else {
+            $('#formID').attr('onSubmit','return true');   
+        };
+         }
         });
-        });
-    </script> 
+    });
+    </script>
+    <title>Đăng kí</title>
 </head>
 <body>
     <header>
@@ -45,40 +64,31 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangky.php">Đăng kí</a></li>
+                <li><a href="dangnhap.php">Đăng nhập</a></li>
+                <li><a href="dangki.php">Đăng kí</a></li>
             </ul>
         </nav>
-    
     </header>
-    
-    <section id="dangnhap">
-        <div class="dangnhap_form">
-            <form class="dangnhap_for"  id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
-                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập<hr class="dangnhap_hr"></h3>
-                <nav class="dangnhap_inline1"><h3 ><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a><hr class="dangnhap_hr"></h3></nav>
-                <br><div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email"></div>
-                <br><div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangnhap_input" name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
-                <div class="remember">
-                    <input type="checkbox"  name="Ghi nhớ đăng nhập"  id="remember" value="1" >
-                    <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
-                    <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
-                <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
-                </div>
-                <br>
-                <div id = "result" 
-                ><?PHP
-                    $thongbao="";
-                  if ( isset($_GET['user_found']) && $_GET['user_found'] == 0 )
-                  {
-                     $thongbao="Tài khoản hoặc mật khẩu sai";
-                  }
-                  echo '<span style="color: #F52000; font-weight:bold;padding-left:80px;font-style:italic">'.$thongbao.'</span>';
-                  ?>
+
+    <section id="dangki">
+        <div class="dangki_form">
+            <form class="dangki_for"  id="formID" action="../php_xuly/dangky_xuly.php" method="Post">
+                <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.php">Đăng nhập</a><hr class="dangnhap_hr"></h3>
+                <nav class="dangki_inline"><h3 >Tạo tài khoản<hr class="dangki_hr"></h3></nav>
+                <br><div class="dangki_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
+                    <input type="text" class="dangki_input" id="username" name="username" placeholder="Nhập tên đăng nhập "> </div>
+                    <br><div class="dangki_khung"><i class="fas fa-envelope fa-2x icon_khung" ></i></i><div class="vl"></div>
+                    <input type="email" class="dangki_input"id="username" name="email" placeholder="Nhập email "> </div>
+                    <br><div class="dangki_khung"><i class="fas fa-phone-alt fa-2x icon_khung"></i><div class="vl"></div>
+                    <input type="tel" class="dangki_input" id="tel" name="tel" placeholder="Nhập số điện thoại "> </div>
+                <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
+                <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu "> </div>
+                <input type="submit" value="Đăng kí" name="register" id="register" class="dangki_btn">
                 </div>
             </form>
+         
         </div>
     </section>
 
@@ -108,6 +118,13 @@
         </div>
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
+       
     </footer>
+    <div class="dialog overlay" id="dialog_overlay">
+        <div class="dialog-body">
+            <h1 id="dialog_title"></h1>
+            <p id="dialog_content"></p>
+        </div>
+    </div>
 </body>
 </html>
