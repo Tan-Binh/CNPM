@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/vanHoaNhatBan.css">
+    <link rel="stylesheet" type="text/css" href="../css/dangnhap_style.php">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-
-    <title>Văn hóa Nhật Bản</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Đăng nhập</title>
+    <script>
+        $(document).ready(function() 
+        {
+        $("#login").click(function() 
+        {
+        var name = $("#username").val();
+        var password = $("#pwd").val();
+        if (name == '' || password == '') 
+        {
+        alert("Mời bạn nhập đầy đủ thông tin");
+        $('#formID').attr('onSubmit','return false');
+        } ;
+        });
+        });
+    </script> 
 </head>
 <body>
     <header>
@@ -28,44 +45,30 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.php">Đăng nhập</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
                 <li><a href="dangky.php">Đăng kí</a></li>
             </ul>
         </nav>
+    
     </header>
-
-    <section id="van_hoa_nhat_ban">
-        <div class="van_hoa_container">
-            <h1>Văn hóa Nhật Bản</h1>
-            <div class="van_hoa_content">
-                <div class="van_hoa_element">
-                    <img src="../images/van_hoa/tradao.png" alt="">
-                    <h3 class="tra_dao_color">Văn hóa trà đạo</h3>
-                    <p class="time">03/11/2021</p>
-                    <p class="mo_ta">
-                        Cho đến nay có rất nhiều nhà nghiên cứu ở Nhật Bản cũng như các nước khác nghiên cứu về Trà đạo Nhật Bản, nhưng hầu hết đều dừng ở mức độ mô tả về trình tự, về chất liệu, hình dạng của dụng cụ pha và uống, về kiến trúc và nội thất của phòng trà …
-                    </p>
-                    <a class="tra_dao_color" href="../web/traDao.html">Xem thêm >></a>
+    
+    <section id="dangnhap">
+        <div class="dangnhap_form">
+            <form class="dangnhap_for"  id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
+                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập<hr class="dangnhap_hr"></h3>
+                <nav class="dangnhap_inline1"><h3 ><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a><hr class="dangnhap_hr"></h3></nav>
+                <br><div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email"></div>
+                <br><div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="password" class="dangnhap_input" name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
+                <div class="remember">
+                    <input type="checkbox"  name="Ghi nhớ đăng nhập"  id="remember" value="1" >
+                    <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
+                    <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
+                <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
                 </div>
-                <div class="van_hoa_element">
-                    <img src="../images/van_hoa/kimono.png" alt="">
-                    <h3 class="kimono_color">Trang phục truyền thống</h3>
-                    <p class="time">04/11/2021</p>
-                    <p class="mo_ta">
-                        Kimono là trang phục truyền thống của đất nước Nhật Bản. Trước đây, Kimono được cả đàn ông và phụ nữ sử dụng như trang phục hàng ngày. Tuy nhiên, ngày nay chỉ có phụ nữ Nhật mặc Kimono là chủ yếu còn người đàn ông Nhật thường chỉ mặc Kimono trong các dịp lễ ...
-                    </p>
-                    <a class="kimono_color" href="../web/kimono.html">Xem thêm >></a>
-                </div>
-                <div class="van_hoa_element">
-                    <img src="../images/van_hoa/sumo.png" alt="">
-                    <h3 class="sumo_color">Đấu Sumo</h3>
-                    <p class="time">05/11/2021</p>
-                    <p class="mo_ta">
-                        Sumo Nhật Bản là môn võ cổ truyền thể hiện tinh thần của Thần Đạo (Shinto) - nền văn hóa tín ngưỡng bậc nhất của người dân Nhật. Trong mỗi cuộc thi đấu, các Sumo sẽ thể hiện những điệu múa cổ truyền và một vài nghi lễ chính ...
-                    </p>
-                    <a class="sumo_color" href="../web/sumo.html">Xem thêm >></a>
-                </div>
-            </div>
+                
+            </form>
         </div>
     </section>
 
