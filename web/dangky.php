@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../js/dangky.js"></script> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,40 @@
     <link rel="stylesheet" href="../css/dangki.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() 
+        {
+        $("#register").click(function() 
+        {
+        var name = $("#username").val();
+        var email = $("#email").val();
+        var password = $("#pwd").val();
+        var cpassword = $("#cnfpwd").val();
+        var tel= $("#tel").val();
+        if (name == '' || email == '' || password == '' || cpassword == '' ||tel  == '') 
+        {
+        alert("Mời bạn nhập đầy đủ thông tin");
+        $('#formID').attr('onSubmit','return false');
+        } 
+        else if ((password.length) < 8) 
+        {
+        alert("Mật khẩu phải từ 8 kí tự trở lên");
+        $('#formID').attr('onSubmit','return false');
+        } 
+        else if (!(password).match(cpassword)) 
+        {
+        alert("Nhập lại mật khẩu không trùng");
+        $('#formID').attr('onSubmit','return false');
+        }
+        else {
+        $('#formID').attr('onSubmit','return true');
+        }
+        });
+        });
+    
+    </script> 
     <title>Đăng kí</title>
 </head>
 <body>
@@ -30,16 +63,16 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangki.html">Đăng kí</a></li>
+                <li><a href="dangnhap.php">Đăng nhập</a></li>
+                <li><a href="dangki.php">Đăng kí</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="dangki">
-        <div class="dangki_form" id="formID" action="process.php" method="POST">
-            <form class="dangki_for">
-                <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.html">Đăng nhập</a><hr class="dangnhap_hr"></h3>
+        <div class="dangki_form">
+            <form class="dangki_for"  id="formID" action="../php_xuly/dangky_xuly.php" method="Post">
+                <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.php">Đăng nhập</a><hr class="dangnhap_hr"></h3>
                 <nav class="dangki_inline"><h3 >Tạo tài khoản<hr class="dangki_hr"></h3></nav>
                 <br><div class="dangki_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
                     <input type="text" class="dangki_input" id="username" name="username" placeholder="Nhập tên đăng nhập "> </div>
@@ -51,7 +84,7 @@
                 <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
                 <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
                 <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu "> </div>
-                <button type="submit" value="Register" name="register" id="register" class="dangki_btn"><label class="btn_text"> Đăng ký</label></button>
+                <input type="submit" value="Đăng kí" name="register" id="register" class="dangki_btn">
                 </div>
             </form>
         </div>

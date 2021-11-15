@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../js/dangky.js"></script> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/dangnhap.css">
-    <link rel="stylesheet" href="../css/dangki.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-    <title>Đăng kí</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Đăng nhập</title>
+    <script>
+        $(document).ready(function() 
+        {
+        $("#login").click(function() 
+        {
+        var name = $("#username").val();
+        var password = $("#pwd").val();
+        if (name == '' || password == '') 
+        {
+        alert("Mời bạn nhập đầy đủ thông tin");
+        $('#formID').attr('onSubmit','return false');
+        } ;
+        });
+        });
+    </script> 
 </head>
 <body>
     <header>
@@ -31,28 +46,28 @@
         <nav class="login">
             <ul>
                 <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangki.html">Đăng kí</a></li>
+                <li><a href="dangky.php">Đăng kí</a></li>
             </ul>
         </nav>
+    
     </header>
-
-    <section id="dangki">
-        <div class="dangki_form" id="formID" action="process.php" method="POST">
-            <form class="dangki_for">
-                <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.html">Đăng nhập</a><hr class="dangnhap_hr"></h3>
-                <nav class="dangki_inline"><h3 >Tạo tài khoản<hr class="dangki_hr"></h3></nav>
-                <br><div class="dangki_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
-                    <input type="text" class="dangki_input" id="username" name="username" placeholder="Nhập tên đăng nhập "> </div>
-                    <br><div class="dangki_khung"><i class="fas fa-envelope fa-2x icon_khung" ></i></i><div class="vl"></div>
-                    <input type="email" class="dangki_input"id="username" name="email" placeholder="Nhập email "> </div>
-                    <br><div class="dangki_khung"><i class="fas fa-phone-alt fa-2x icon_khung"></i><div class="vl"></div>
-                    <input type="tel" class="dangki_input" id="tel" name="tel" placeholder="Nhập số điện thoại "> </div>
-                <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
-                <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu "> </div>
-                <button type="submit" value="Register" name="register" id="register" class="dangki_btn"><label class="btn_text"> Đăng ký</label></button>
+    
+    <section id="dangnhap">
+        <div class="dangnhap_form">
+            <form class="dangnhap_for"  id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
+                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập<hr class="dangnhap_hr"></h3>
+                <nav class="dangnhap_inline1"><h3 ><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a><hr class="dangnhap_hr"></h3></nav>
+                <br><div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email"></div>
+                <br><div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
+                <input type="password" class="dangnhap_input" name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
+                <div class="remember">
+                    <input type="checkbox"  name="Ghi nhớ đăng nhập"  id="remember" value="1" >
+                    <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
+                    <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
+                <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
                 </div>
+                
             </form>
         </div>
     </section>
