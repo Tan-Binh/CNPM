@@ -27,7 +27,7 @@
                 <li><a href="web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
                 <li><a href="#">Tư vấn</a></li>
                 <li><a href="#">Tài liệu</a></li>
-                <li><a href="#">Thi thử</a></li>
+                <li><a href="./web/thithu.html">Thi thử</a></li>
             </ul>
         </nav>
         <nav class="login">
@@ -47,11 +47,11 @@
         </div>
         <div class="content">
             <div class="select">
-                <p class="js_khoa_le">
+                <p>
                     Khóa lẻ
                 </p>
             </div>
-            <div class="list js_list_khoa_le">
+            <div class="list">
                 <div class="element">
                     <p class="level">N5</p>
                     <hr>
@@ -111,11 +111,11 @@
         </div>
         <div class="content">
             <div class="select">
-                <p class="js_khoa_combo">
+                <p>
                     Khóa combo
                 </p>
             </div>
-            <div class="list js_list_khoa_combo">
+            <div class="list">
                 <div class="element">
                     <p class="level">N5 + N4</p>
                     <hr>

@@ -54,12 +54,12 @@
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="../web/gioithieu.html">Giới thiệu</a></li>
+            <li><a href="./gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Khóa học</a></li>
-                <li><a href="../web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+                <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
                 <li><a href="#">Tư vấn</a></li>
                 <li><a href="#">Tài liệu</a></li>
-                <li><a href="#">Thi thử</a></li>
+                <li><a href="./thithu.html">Thi thử</a></li>
             </ul>
         </nav>
         <nav class="login">
