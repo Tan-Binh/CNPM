@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,29 +14,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Đăng nhập</title>
     <script>
-        $(document).ready(function() 
-        {
-        $("#login").click(function() 
-        {
-        var name = $("#username").val();
-        var password = $("#pwd").val();
-        if (name == '' || password == '') 
-        {
-        alert("Mời bạn nhập đầy đủ thông tin");
-        $('#formID').attr('onSubmit','return false');
-        } ;
+        $(document).ready(function() {
+            $("#login").click(function() {
+                var name = $("#username").val();
+                var password = $("#pwd").val();
+                if (name == '' || password == '') {
+                    alert("Mời bạn nhập đầy đủ thông tin");
+                    $('#formID').attr('onSubmit', 'return false');
+                };
+            });
         });
-        });
-    </script> 
+    </script>
 </head>
+
 <body>
     <header>
-        <a class="logo_header" href="../index.html">
+        <a class="logo_header" href="../index.php">
             <img src="../images/header/logoHeader.png" alt="">
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="../web/gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Khóa học</a></li>
                 <li><a href="../web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
                 <li><a href="#">Tư vấn</a></li>
@@ -45,29 +44,39 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangky.php">Đăng kí</a></li>
+                <li><a href="./dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./dangky.php">Đăng kí</a></li>
             </ul>
         </nav>
-    
     </header>
-    
     <section id="dangnhap">
         <div class="dangnhap_form">
-            <form class="dangnhap_for"  id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
-                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập<hr class="dangnhap_hr"></h3>
-                <nav class="dangnhap_inline1"><h3 ><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a><hr class="dangnhap_hr"></h3></nav>
-                <br><div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email"></div>
-                <br><div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangnhap_input" name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
+            <form class="dangnhap_for" id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
+                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập
+                    <hr class="dangnhap_hr">
+                </h3>
+                <nav class="dangnhap_inline1">
+                    <h3><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a>
+                        <hr class="dangnhap_hr">
+                    </h3>
+                </nav>
+                <br>
+                <div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i>
+                    <div class="vl"></div>
+                    <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email">
+                </div>
+                <br>
+                <div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i>
+                    <div class="vl"></div>
+                    <input type="password" class="dangnhap_input" name="pwd" id="pwd" placeholder="Nhập mật khẩu ">
+                </div>
                 <div class="remember">
-                    <input type="checkbox"  name="Ghi nhớ đăng nhập"  id="remember" value="1" >
+                    <input type="checkbox" name="Ghi nhớ đăng nhập" id="remember" value="1">
                     <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
                     <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
-                <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
+                    <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
                 </div>
-                
+
             </form>
         </div>
     </section>
@@ -77,10 +86,12 @@
             <img src="../images/footer/logoFooter.png" alt="">
         </div>
         <div class="Thongtin" width="500px">
-            <strong><p class="title_1">THÔNG TIN LIÊN HỆ</p></strong>
+            <strong>
+                <p class="title_1">THÔNG TIN LIÊN HỆ</p>
+            </strong>
             <hr class="hr_white">
             <hr class="hr_blue">
-            <p> 
+            <p>
                 <i class="far fa-envelope icon1"></i>&nbsp;<a href="mailto:fujinihongo@gmail.com" class="anchor1">fujinihongo@gmail.com</a>
                 <br><br><i class="fas fa-phone-alt icon1"></i> 0382468820
                 <br><br><i class="far fa-calendar-check icon1"></i> Thứ 2- Thứ 7: 8h - 15h
@@ -88,7 +99,9 @@
             </p>
         </div>
         <div class="Ketnoi">
-            <strong><p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p></strong>
+            <strong>
+                <p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p>
+            </strong>
             <hr class="hr_white">
             <hr class="hr_blue">
             <br>
@@ -100,4 +113,5 @@
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,20 @@
     <link rel="stylesheet" href="./css/trangChu_style.php">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
-    
+
     <title>fuji nihongo</title>
 </head>
+
 <body>
     <header>
-        <a class="logo_header" href="./index.html">
+        <a class="logo_header" href="./index.php">
             <img src="./images/header/logoHeader.png" alt="">
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="web/gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Khóa học</a></li>
-                <li><a href="./web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+                <li><a href="web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
                 <li><a href="#">Tư vấn</a></li>
                 <li><a href="#">Tài liệu</a></li>
                 <li><a href="#">Thi thử</a></li>
@@ -35,7 +37,6 @@
             </ul>
         </nav>
     </header>
-    
     <section class="banner">
         <img src="./images/banner/banner.png" alt="">
     </section>
@@ -56,7 +57,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -66,7 +68,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -76,7 +79,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -86,7 +90,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -96,7 +101,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -109,13 +115,14 @@
                     Khóa combo
                 </p>
             </div>
-             <div class="list js_list_khoa_combo">
+            <div class="list js_list_khoa_combo">
                 <div class="element">
                     <p class="level">N5 + N4</p>
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -125,7 +132,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -135,7 +143,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -145,7 +154,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -155,7 +165,8 @@
                     <hr>
                     <p>Học phí:</p>
                     <p class="value">1000000VND</p>
-                    <p>Thời hạn:<p>
+                    <p>Thời hạn:
+                    <p>
                     <p class="value">6 tháng</p>
                     <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
@@ -163,7 +174,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="trangchu_sensei">
         <div class="sensei_1">
             <img src="images/sensei/Ellipse 2.png">
@@ -174,8 +185,9 @@
             <h4>3456+</h4>
             <p>Học viện tham gia</p>
             <hr class="grey_hr">
-            <p>- 4 năm kinh nghiệm giảng dạy tiếng Nhật 
-            <br>- Đã từng sản xất hơn 300 video dạy tiếng Nhật trên youtube và livestream chữa đề/giảng dạy trên facebook </p>
+            <p>- 4 năm kinh nghiệm giảng dạy tiếng Nhật
+                <br>- Đã từng sản xất hơn 300 video dạy tiếng Nhật trên youtube và livestream chữa đề/giảng dạy trên facebook
+            </p>
         </div>
         <div class="sensei_2">
             <img src="images/sensei/Ellipse 2.png">
@@ -186,37 +198,38 @@
             <h4>3456+</h4>
             <p>Học viện tham gia</p>
             <hr class="grey_hr">
-            <p>- 4 năm kinh nghiệm giảng dạy tiếng Nhật 
-            <br>- Đã từng sản xất hơn 300 video dạy tiếng Nhật trên youtube và livestream chữa đề/giảng dạy trên facebook </p>
+            <p>- 4 năm kinh nghiệm giảng dạy tiếng Nhật
+                <br>- Đã từng sản xất hơn 300 video dạy tiếng Nhật trên youtube và livestream chữa đề/giảng dạy trên facebook
+            </p>
         </div>
         <div class="gioithieu_sensei">
             <h2 class="gioithieu_sensei_title">Đội ngũ sensei tại Fuji Nihongo</h2>
-            <p class="gioithieu_sensei_content">Đội ngũ giáo viên có trình độ N2-N1 và kinh nghiệm 
-                2 năm giảng dạy trở lên là một nhân tố quan trọng trong 
+            <p class="gioithieu_sensei_content">Đội ngũ giáo viên có trình độ N2-N1 và kinh nghiệm
+                2 năm giảng dạy trở lên là một nhân tố quan trọng trong
                 việc tạo nên sự thành công trong chất lượng đào tạo tại FujiFuji</p>
             <nav class="gioithieu_sensei_content_btn"><a href="" class="gioithieu_sensei_anchor">Đọc thêm...</a></nav>
         </div>
 
     </section>
-    
+
     <section class="trangchu_vanhoa">
         <h3 class="vanhoa_style">Văn hóa Nhật Bản</h3>
         <div class="vanhoatradao">
             <div class="img_vanhoa">
-                <a href="./web/traDao.html"><img src="images/van_hoa/tradao.png"class="img_vanhoa_1" width="226px" height="260px"class="img_vanhoa_1"></a>
+                <a href="./web/traDao.html"><img src="images/van_hoa/tradao.png" class="img_vanhoa_1" width="226px" height="260px" class="img_vanhoa_1"></a>
                 <br><a href="./web/traDao.html" class="anchor_1">Văn hóa trà đạo </a>
             </div>
         </div>
         <div class="kimono">
             <div class="img_vanhoa">
-                <a href="./web/kimono.html"><img src="images/van_hoa/kimono.png"width="226px" height="280px"class="img_vanhoa_1"></a>
+                <a href="./web/kimono.html"><img src="images/van_hoa/kimono.png" width="226px" height="280px" class="img_vanhoa_1"></a>
                 <br><a href="./web/kimono.html" class="anchor_1">Trang phục truyền thống thống Kimono </a>
             </div>
         </div>
         <div class="sumo">
             <div class="img_vanhoa">
-                <a href="./web/sumo.html"><img src="images/van_hoa/sumo.png" width="226px" height="260px"class="img_vanhoa_1"></a>
-               <br> <a href="./web/sumo.html" class="anchor_1 anchor_1:active">Đấu Sumo</a>
+                <a href="./web/sumo.html"><img src="images/van_hoa/sumo.png" width="226px" height="260px" class="img_vanhoa_1"></a>
+                <br> <a href="./web/sumo.html" class="anchor_1 anchor_1:active">Đấu Sumo</a>
             </div>
         </div>
     </section>
@@ -227,7 +240,7 @@
                 <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
                 <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
                 <br><input type="text" class="input_hvt" name="" placeholder="Nhập họ và tên">
-                
+
                 <br><input type="tel" class="input_tel" name="" placeholder="Nhập số điện thoại">
                 <br><input type="email" class="input_email" name="" placeholder="Nhập email">
                 <br>
@@ -249,10 +262,12 @@
             <img src="./images/footer/logoFooter.png" alt="">
         </div>
         <div class="Thongtin" width="500px">
-            <strong><p class="title_1">THÔNG TIN LIÊN HỆ</p></strong>
+            <strong>
+                <p class="title_1">THÔNG TIN LIÊN HỆ</p>
+            </strong>
             <hr class="hr_white">
             <hr class="hr_blue">
-            <p> 
+            <p>
                 <i class="far fa-envelope icon1"></i>&nbsp;<a href="mailto:fujinihongo@gmail.com" class="anchor1">fujinihongo@gmail.com</a>
                 <br><br><i class="fas fa-phone-alt icon1"></i> 0382468820
                 <br><br><i class="far fa-calendar-check icon1"></i> Thứ 2- Thứ 7: 8h - 15h
@@ -260,7 +275,9 @@
             </p>
         </div>
         <div class="Ketnoi">
-            <strong><p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p></strong>
+            <strong>
+                <p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p>
+            </strong>
             <hr class="hr_white">
             <hr class="hr_blue">
             <br>
@@ -271,9 +288,10 @@
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
     </footer>
-    
+
     <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/trangChu.js"></script>
 </body>
+
 </html>
