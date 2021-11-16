@@ -1,0 +1,45 @@
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: WorkSans;
+    src: url(../fonts/WorkSans.ttf);
+}
+html {
+    font-family: WorkSans;
+}
+#gioithieu {
+    margin-top: 120px;
+    padding: 50px 70px;
+	background: url(../images/van_hoa/nenhoakimono.png) bottom center /100% no-repeat 
+}
+#gioithieu .body{
+	background:  url(../images/van_hoa/nenkimono.png)  center no-repeat; 
+}
+#gioithieu h1 {
+    margin-bottom: 20px;
+    color: #ED809D;
+    text-align: center;
+    font-size: 40px;
+    -webkit-text-stroke-width: 0.3px;
+}
+#gioithieu h3 {
+    margin: 20px 0 10px 0;
+    color: #ED809D;
+    font-size: px;
+    -webkit-text-stroke-width: 0.3px;
+}
+#gioithieu p {
+    margin: 10px 0;
+}
+#gioithieu .image {
+    text-align: center;
+}
+#gioithieu .hinh1 {
+	width: 300px
+}
+
+
+
