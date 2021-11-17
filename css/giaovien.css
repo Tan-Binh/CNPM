@@ -12,8 +12,8 @@ html {
 }
   
 .grid {
-    margin: 150px 200px auto 200px;
-    padding: 0 20px;
+    margin: 6em 10em;
+    padding: 0 1em;
     max-width: 100%;
     text-align: center;
     line-height: 2em;
@@ -38,11 +38,11 @@ strong{
     grid-template-columns: 1fr 1fr;
 }
 .gv-items{
-    border-radius: 20px;
+    border-radius: 1.5em;
     box-shadow: 0.5em 0.5em 0.5em #CEEDFF;
-    border: solid 2px #CEEDFF ;
-    width: 450px;
-    padding:30px;
+    border: solid 0.1em #CEEDFF ;
+    width: 16em;
+    padding:1.5em;
 }
 li {
     text-align: left;
