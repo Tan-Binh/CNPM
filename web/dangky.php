@@ -48,24 +48,24 @@
     <title>Đăng kí</title>
 </head>
 <body>
-    <header>
-        <a class="logo_header" href="../index.html">
+<header>
+        <a class="logo_header" href="../index.php">
             <img src="../images/header/logoHeader.png" alt="">
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="#">Giới thiệu</a></li>
+            <li><a href="./gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Khóa học</a></li>
-                <li><a href="../web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+                <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
                 <li><a href="#">Tư vấn</a></li>
                 <li><a href="#">Tài liệu</a></li>
-                <li><a href="#">Thi thử</a></li>
+                <li><a href="./thithu.html">Thi thử</a></li>
             </ul>
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="dangnhap.php">Đăng nhập</a></li>
-                <li><a href="dangki.php">Đăng kí</a></li>
+                <li><a href="./dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./dangky.php">Đăng kí</a></li>
             </ul>
         </nav>
     </header>
