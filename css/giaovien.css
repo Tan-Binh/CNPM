@@ -12,7 +12,7 @@ html {
 }
   
 .grid {
-    margin: 6em 10em;
+    margin: 6em 9em;
     padding: 0 1em;
     max-width: 100%;
     text-align: center;
@@ -41,7 +41,7 @@ strong{
     border-radius: 1.5em;
     box-shadow: 0.5em 0.5em 0.5em #CEEDFF;
     border: solid 0.1em #CEEDFF ;
-    width: 16em;
+    width: 85%;
     padding:1.5em;
 }
 li {
