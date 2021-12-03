@@ -2,36 +2,47 @@
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: WorkSans;
     src: url(../fonts/WorkSans.ttf);
 }
+
 html {
     font-family: WorkSans;
 }
+
 #sumo {
     margin-top: 120px;
-    padding: 50px 70px;
-    background: url(../images/van_hoa/linesumo.png) bottom center /95% no-repeat ,url(../images/van_hoa/nensumo.png) center /contain no-repeat;
+    padding: 50px 130px;
+    background: url(../images/van_hoa/linesumo.png) bottom center /90% no-repeat ,url(../images/van_hoa/nensumo.png) center /contain no-repeat;
 }
-#sumo h1 {
-    margin-bottom: 20px;
-    color: #875831;
-    text-align: center;
-    font-size: 40px;
-    -webkit-text-stroke-width: 0.3px;
-}
-#sumo h3 {
-    margin: 20px 0 10px 0;
-    color: #875831;
-    font-size: px;
-    -webkit-text-stroke-width: 0.3px;
-}
-#sumo p {
-    margin: 10px 0;
-}
-#sumo .image {
-    text-align: center;
-}
+    #sumo .back {
+        color: #9EC7E4;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+        #sumo .back:hover {
+            color: #539ed3;
+        }
+    #sumo h1 {
+        margin-bottom: 20px;
+        color: #875831;
+        text-align: center;
+        font-size: 40px;
+        -webkit-text-stroke-width: 0.3px;
+    }
+    #sumo h3 {
+        margin: 20px 0 10px 0;
+        color: #875831;
+        font-size: px;
+        -webkit-text-stroke-width: 0.3px;
+    }
+    #sumo p {
+        margin: 10px 0;
+    }
+    #sumo .image {
+        text-align: center;
+    }
 
 

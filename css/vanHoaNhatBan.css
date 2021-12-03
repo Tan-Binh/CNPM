@@ -25,7 +25,6 @@ html {
     color: #318FB5;
     font-size: 35px;
     font-weight: bold;
-    -webkit-text-stroke-width: 0.3px;
 }
 .van_hoa_content {
     display: flex;
@@ -45,7 +44,6 @@ html {
 }
 .van_hoa_element h3 {
     height: 20%;
-    -webkit-text-stroke-width: 0.3px;
 }
 .van_hoa_element .time {
     color: #858585;

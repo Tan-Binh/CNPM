@@ -2,39 +2,48 @@
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: WorkSans;
     src: url(../fonts/WorkSans.ttf);
 }
+
 html {
     font-family: WorkSans;
 }
+
 .left {
     float: left;
 }
+
 #traDao {
     margin-top: 120px;
-    padding: 50px 70px;
-    background: url(../images/van_hoa/lineTraDao.png) bottom center /95% no-repeat ,url(../images/van_hoa/nenTraDao.png) center /contain no-repeat;
+    padding: 50px 130px;
+    background: url(../images/van_hoa/lineTraDao.png) bottom center /90% no-repeat ,url(../images/van_hoa/nenTraDao.png) center /contain no-repeat;
 }
-#traDao h1 {
-    margin-bottom: 20px;
-    color: #2E6722;
-    text-align: center;
-    font-size: 40px;
-    -webkit-text-stroke-width: 0.3px;
-}
-#traDao h3 {
-    margin: 20px 0 10px 0;
-    color: #2E6722;
-    font-size: px;
-    -webkit-text-stroke-width: 0.3px;
-}
-#traDao p {
-    margin: 10px 0;
-}
-#traDao .image {
-    text-align: center;
-}
+    #traDao .back {
+        color: #9EC7E4;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+        #traDao .back:hover {
+            color: #539ed3;
+        }
+    #traDao h1 {
+        margin-bottom: 20px;
+        color: #2E6722;
+        text-align: center;
+        font-size: 40px;
+    }
+    #traDao h3 {
+        margin: 20px 0 10px 0;
+        color: #2E6722;
+    }
+    #traDao p {
+        margin: 10px 0;
+    }
+    #traDao .image {
+        text-align: center;
+    }
 
 
