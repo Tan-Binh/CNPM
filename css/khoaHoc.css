@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+.gap-100 {
+    margin-bottom: 100px;
+}
+.gap-60 {
+    margin-bottom: 60px;
+}
+.gap-40 {
+    margin-bottom: 40px;
+}
+.gap-20 {
+    margin-bottom: 20px;
+}
+/* .container {
+    height: 100%;
+    width: 100%;
+} */
+.search {
+    position: relative;
+}
+.search-input {
+    width: 30%;
+    height: 50px;
+    margin-left: 35%;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    border-radius: 10px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+.search-icon {
+    position: absolute;
+    font-size: 1.8rem;
+    top: 6px;
+    right: 35.5%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: right;
+}
+.label-left {
+    background-color: rgba(64, 166, 202, 0.6);
+    border-radius: 6px;
+    width: 25%;
+    text-align: center;
+    height: 80px;
+    font-size: 1.6rem;
+    color:  #1C71AD;
+}
+.label-left h1 {
+    margin: 0;
+}
+.content {
+    width: 60%;
+    margin: 0 auto;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 200px;
+    grid-row-gap: 100px;
+    text-align: center;
+    min-height: 566px;
+}
+.course {
+    border: 1px solid #1C71AD;
+    border-radius: 20px;
+    /* box-shadow: 2px 2px 2px 2px red; */
+    box-shadow: 0 0 0.75rem #1C71AD ;
+}
+.course-title {
+    background-color: rgba(161, 232, 255, 0.67);
+    height: 96px;
+    border-radius: 20px;
+}
+.course-text {
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    position: relative;
+    top: 25%;
+}
+.course__detail {
+    font-size: 2.2rem;
+    font-weight: bold;
+    height: 80px;
+    
+}
+.course__detail-name {
+    margin-bottom: 0;
+    position: relative;
+    top: 25%;
+}
+
+.course .course__benefit__list {
+    padding-right: 40px;
+}
+.course__text {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.more-action {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.icon-more {
+    font-size: 5rem;
+}
+.icon-more i {
+    padding-left: 10px;
+}
+.number-registed {
+    text-align: left;
+    margin-top: 30px;
+}
+.text-number {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.btn-more {
+    background-color: rgba(98, 207, 253, 0.67);
+    border: none;
+    outline: none;
+    padding: 20px 50px;
+    border-radius: 30px;
+}
+
+/* End container  */
+
+
+
+/* Page course 2 */
+
+/* header and footerdùng chung với page 1 */
+/* start content-course  */
+.content-course {
+    width: 960px;
+    margin: 0 auto;
+}
+.col-960px {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 80px;
+    text-align: center;
+    min-height: 266px;
+}
+.font-3rem {
+    font-size: 3rem;
+}
+.course .course__detail {
+    
+    border-bottom: 0.5px solid rgb(231, 210, 210);
+}
+.course .course__detail-name {
+    top: 10%;
+}
+.course .text-center {
+    text-align: center;
+}
+.course .course-text {
+    top: 15%;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+    overflow: hidden
+}
+.about-sense p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.about-sense p:last-child {
+    display: inline-block;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding: 0 40px 10px;
+}
+.amount-people {
+    width: 960px;
+    margin: 0 auto;
+}
+.amount-people .more-action {
+    grid-template-columns: 30% 70%;
+}
+.amount-people .icon-more {
+    text-align: right;
+    
+    font-size: 6rem;
+}
+.amount-people .number-registed .text-number {
+    padding-left: 40px;
+    font-size: 2rem;
+}
+/* .action-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+.action-register .btn-more{
+    font-size: 1.8rem;
+}
+.action-register .time-register {
+    font-size: 1.6rem;
+    margin-top: 30px;
+}
+
+.action-register .time-register {
+    position: relative;
+    left: 25%;
+    color:   #1C71AD;
+}
+
+.action-register .btn-more {
+    position: relative;
+    left: 32%;
+}
