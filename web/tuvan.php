@@ -1,14 +1,3 @@
-<?php
-session_start();
-function alert($msg) {
-    echo "<script type='text/javascript'>alert('$msg');</script>";
-}
-$servername = "localhost";
-$username = "root";
-$password = "100201";
-$dbname = "DEMO";
-$conn = new mysqli($servername, $username, $password, $dbname);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,21 +7,37 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-	<link rel="stylesheet" href="../css/thongtin.css">
+    <link rel="stylesheet" href="../css/lienhe_style.php">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>fuji nihongo</title>
+    <script>
+         $(document).ready(function() 
+        {
+        $("#tuvan").click(function() 
+        {
+        var name = $("#hvt").val();
+        var email = $("#email").val();
+        var tel= $("#tel").val();
+        var e = document.getElementById("khoahoc");
+        var khoahoc=e.value;
+        if (name == '' || tel  == ''||email == ''||  khoahoc == "1") 
+        {
+        alert("Mời bạn nhập đầy đủ thông tin");
+        $('#lienhe').attr('onSubmit','return false');
+        } 
+        else
+        {
+            $('#lienhe').attr('onSubmit','return true')}
+        })
+        $('#lienhe').attr('onSubmit','return false');
+        });
+    </script>
+
 </head>
 <body>
-    <script>
-       function myFunction()
-       {
-        window.location.href = "../index.php";
-       }
-        </script>
-
 <header>
     <a class="logo_header" href="../index.php">
         <img src="../images/header/logoHeader.png" alt="">
@@ -49,29 +54,50 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     </nav>
     <nav class="login">
         <ul>
+            <li><a href="./dangnhap.php">Đăng nhập</a></li>
+            <li><a href="./dangky.php">Đăng ký</a></li>
         </ul>
     </nav>
 </header>
+
+
+    <section class="lienhe">
+        <div class="lienhe_content">
+            <form class="form_lienhe" action="../php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
+                <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
+                <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
+                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên">
+                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại">
+                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email">
+                <br>
+                <select id="khoahoc" name="khoahoc" class="input_khoahoc">
+                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
+                    <option value="N5">N5</option>
+                    <option value="N4">N4</option>
+                    <option value="N3">N3</option>
+                    <option value="N2">N2</option>
+                    <option value="N1">N1</option>
+                </select>
+                
+                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
+                <div id = "result" >
+    <?PHP
+                    $thongbao="";
+                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
+                  {
+                     $thongbao="Cảm ơn bạn đã liên hệ";
+                  }
+                  echo '<span style="color: #F52000; font-weight:bold;
+                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
+    ?>
     
-    <section class="thongtin">
-		<div class="khung">
-        	<div class="thongtin_title">
-            	<h1>Chào mừng <?php echo " ". $_SESSION['username'] ?></h1>
-            	<h2>Thông tin tài khoản</h2>
-        	</div>
-        	<div class="thongtin_content">
-				<p>
-                	<br>Số điện thoại:<strong><?php echo " ". $_SESSION['tel']  ?></strong>
-                	<br>Email: <strong><?php echo " ".$_SESSION["email"] ?></strong>
-                	<br>Bạn đã đăng kí khóa: <strong><?php echo " ".$_SESSION["Khoahoc"] ?></strong>
-                	<br>Bạn  <strong><?php echo " ".$_SESSION['TinhTrangThanhToan'] ?></strong> thanh toán 
-					<br>
-            	</p>
-            <button onclick="myFunction()">Đăng xuất</button>
-        	</div>
-		</div>
+    </div>
+            </form>
+           
+        </div>
     </section>
 
+ 
     <footer>
         <div class="logo_footer">
             <img src="../images/footer/logoFooter.png" alt="">

@@ -23,17 +23,17 @@
         <nav class="content_list">
             <ul>
                 <li><a href="web/gioithieu.html">Giới thiệu</a></li>
-                <li><a href="#">Khóa học</a></li>
+                <li><a href="web/khoahoc.html">Khóa học</a></li>
                 <li><a href="web/vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
-                <li><a href="#">Tư vấn</a></li>
-                <li><a href="#">Tài liệu</a></li>
+                <li><a href="web/tuvan.php">Tư vấn</a></li>
+                <li><a href="web/giaovien.html">Giáo viên</a></li>
                 <li><a href="./web/thithu.html">Thi thử</a></li>
             </ul>
         </nav>
         <nav class="login">
             <ul>
                 <li><a href="web/dangnhap.php">Đăng nhập</a></li>
-                <li><a href="web/dangky.php">Đăng kí</a></li>
+                <li><a href="web/dangky.php">Đăng ký</a></li>
             </ul>
         </nav>
     </header>

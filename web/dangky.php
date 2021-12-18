@@ -49,26 +49,26 @@
 </head>
 <body>
 <header>
-        <a class="logo_header" href="../index.php">
-            <img src="../images/header/logoHeader.png" alt="">
-        </a>
-        <nav class="content_list">
-            <ul>
+    <a class="logo_header" href="../index.php">
+        <img src="../images/header/logoHeader.png" alt="">
+    </a>
+    <nav class="content_list">
+        <ul>
             <li><a href="./gioithieu.html">Giới thiệu</a></li>
-                <li><a href="./khoaHoc.html">Khóa học</a></li>
-                <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
-                <li><a href="#">Tư vấn</a></li>
-                <li><a href="#">Tài liệu</a></li>
-                <li><a href="./thithu.html">Thi thử</a></li>
-            </ul>
-        </nav>
-        <nav class="login">
-            <ul>
-                <li><a href="./dangnhap.php">Đăng nhập</a></li>
-                <li><a href="./dangky.php">Đăng kí</a></li>
-            </ul>
-        </nav>
-    </header>
+            <li><a href="khoahoc.html">Khóa học</a></li>
+            <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+            <li><a href="tuvan.php">Tư vấn</a></li>
+            <li><a href="giaovien.html">Giáo Viên</a></li>
+            <li><a href="./thithu.html">Thi thử</a></li>
+        </ul>
+    </nav>
+    <nav class="login">
+        <ul>
+            <li><a href="./dangnhap.php">Đăng nhập</a></li>
+            <li><a href="./dangky.php">Đăng ký</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section id="dangki">
         <div class="dangki_form">
