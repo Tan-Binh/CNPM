@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: WorkSans;
+    src: url(../fonts/WorkSans.ttf);
+}
+@font-face {
+    font-family: Allura-Regular;
+    src: url(../fonts/Allura-Regular.ttf);
+}
+html {
+    font-family: WorkSans;
+}
+  
+.grid {
+    margin: 6em 9em;
+    padding: 0 1em;
+    max-width: 100%;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.5em;
+  }
+
+.giaovien-banner img{
+    width: 90%;
+  }
+.chamngon {
+    margin: 0.5em 0;
+    font-size: 2em;
+    font-family: Allura-Regular;
+}
+strong{
+    color: #1567A9;
+}
+.list-gv{
+    display: grid;
+    margin: 2em 0;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+}
+.gv-items{
+    border-radius: 1.5em;
+    box-shadow: 0.5em 0.5em 0.5em #CEEDFF;
+    border: solid 0.1em #CEEDFF ;
+    width: 85%;
+    padding:1.5em;
+}
+li {
+    text-align: left;
+}
+.sl-hv{
+    display: flex;
+    grid-gap: 0.5em;
+}
