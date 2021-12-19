@@ -295,5 +295,4 @@
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/trangChu.js"></script>
 </body>
-<script src="./js/khoaHoc.js"></script>
 </html>
