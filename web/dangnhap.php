@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,26 +30,49 @@
 
 <body>
 <header>
-    <a class="logo_header" href="../index.php">
-        <img src="../images/header/logoHeader.png" alt="">
-    </a>
-    <nav class="content_list">
-        <ul>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="khoahoc.html">Khóa học</a></li>
-            <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
-            <li><a href="tuvan.php">Tư vấn</a></li>
-            <li><a href="giaovien.html">Giáo Viên</a></li>
-            <li><a href="./thithu.html">Thi thử</a></li>
-        </ul>
-    </nav>
-    <nav class="login">
-        <ul>
-            <li><a href="./dangnhap.php">Đăng nhập</a></li>
-            <li><a href="./dangky.php">Đăng ký</a></li>
-        </ul>
-    </nav>
-</header>
+        <a class="logo_header" href="../index.php">
+            <img src="../images/header/logoHeader.png" alt="">
+        </a>
+        <nav class="content_list">
+            <ul>
+                <li><a href="./gioithieu.php">Giới thiệu</a></li>
+                <li><a href="khoahoc.php">Khóa học</a></li>
+                <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
+                <li><a href="tuvan.php">Tư vấn</a></li>
+                <li><a href="giaovien.php">Giáo Viên</a></li>
+                <li><a href="./thithu.php">Thi thử</a></li>
+            </ul>
+        </nav>
+        <?php 
+        error_reporting(E_ERROR | E_PARSE);
+        if ($username=="")
+        echo '
+        <nav class="login">
+            <ul>
+                <li><a href="./dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./dangky.php">Đăng ký</a></li>
+            </ul>
+        </nav>';
+        else
+        {
+           echo'
+            <nav class="login">
+            <ul>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn">
+            ';
+             echo $username;
+             echo'<i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">';
+            echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+            echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                    </div>                     
+                </li>
+            </ul>
+             </nav>';
+        }
+        ?>
+    </header>
     <section id="dangnhap">
         <div class="dangnhap_form">
             <form class="dangnhap_for" id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
@@ -69,12 +93,20 @@
                 <div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i>
                     <div class="vl"></div>
                     <input type="password" class="dangnhap_input" name="pwd" id="pwd" placeholder="Nhập mật khẩu ">
+                    <br>
+                    <?php if ($_GET['success']==2) echo '<p style="text-align: center;margin-top:5px;margin-left:120px;color:red; font-weight:bold"> Tài khoản hoặc mật khẩu sai *</p>' ;
+
+                    ?>
+                  
                 </div>
+                <br>
+                    <br>
                 <div class="remember">
                     <input type="checkbox" name="Ghi nhớ đăng nhập" id="remember" value="1">
                     <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
                     <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
                     <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
+                 
                 </div>
 
             </form>

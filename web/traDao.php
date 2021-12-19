@@ -1,3 +1,8 @@
+<?php
+session_start();
+$username="";
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +23,46 @@
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="./gioithieu.html">Giới thiệu</a></li>
-                <li><a href="khoahoc.html">Khóa học</a></li>
-                <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+                <li><a href="./gioithieu.php">Giới thiệu</a></li>
+                <li><a href="khoahoc.php">Khóa học</a></li>
+                <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
                 <li><a href="tuvan.php">Tư vấn</a></li>
-                <li><a href="giaovien.html">Giáo Viên</a></li>
-                <li><a href="./thithu.html">Thi thử</a></li>
+                <li><a href="giaovien.php">Giáo Viên</a></li>
+                <li><a href="./thithu.php">Thi thử</a></li>
             </ul>
         </nav>
+        <?php 
+        error_reporting(E_ERROR | E_PARSE);
+        if ($username=="")
+        echo '
         <nav class="login">
             <ul>
                 <li><a href="./dangnhap.php">Đăng nhập</a></li>
                 <li><a href="./dangky.php">Đăng ký</a></li>
             </ul>
-        </nav>
+        </nav>';
+        else
+        {
+           echo'
+            <nav class="login">
+            <ul>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn">
+            ';
+             echo $username;
+             echo'<i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">';
+            echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+            echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                    </div>                     
+                </li>
+            </ul>
+             </nav>';
+        }
+        ?>
     </header>
     <section id="traDao">
-        <a href="./vanHoaNhatBan.html" class="back">< Quay lại</a>
+        <a href="./vanHoaNhatBan.php" class="back">< Quay lại</a>
         <h1>
             Nét đẹp “ngàn xưa” trong Văn hóa Trà đạo Nhật Bản 
         </h1>

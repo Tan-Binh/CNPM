@@ -234,7 +234,6 @@ background-color: grey;
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 18px;
     text-align: center;
-    background-image: url("../images/van_hoa/bgr_dot_01.png"), url("../images/van_hoa/Ellipse\ 4.png.png") , url("../images/van_hoa/Ellipse\ 5.png"), url("../images/van_hoa/Ellipse\ 6.png"), url("../images/van_hoa/Ellipse\ 7.png"),url("../images/van_hoa/Ellipse\ 8.png");
     background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
     background-size: 304px 304px,166px 313px,333px 105px,207px 149px, 103px 103px,80px 80px;
     background-position:top left,bottom right,center bottom,top right 50px,bottom left,top left 50px;
@@ -277,11 +276,9 @@ background-color: grey;
 }
 .vanhoa_style
 {
-    color: #4382BC;
+    color: rgb(67,130,188);
     font-weight: bold;
     font-size: 40px;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #D9EDF4;
     margin-bottom: 20px;
 }
 /*Văn hóa end*/
@@ -292,7 +289,13 @@ background-color: grey;
     font-size: 20px;
     background-image: url(../images/lien_he/image12.png);
     background-size: cover;
+<<<<<<< Updated upstream
     padding: 20px 22% 40px 22%;
+=======
+    margin-top:25px;
+    padding: 20px 22% 60px 26%;
+    padding-right:26%;
+>>>>>>> Stashed changes
 }
 .lienhe_content
 {

@@ -1,13 +1,26 @@
 <?php
 session_start();
+$username="";
+$username = $_SESSION['username'];
+?>
+<?php
+session_start();
 function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 $servername = "localhost";
-$username = "root";
+$usrname = "root";
 $password = "100201";
 $dbname = "DEMO";
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $usrname, $password, $dbname);
+$username = $_GET['username'];
+$result=mysqli_query($conn,"SELECT * FROM dangky where username='$username'");
+$result=mysqli_fetch_array($result);
+$date= $result['register_date'];
+$tel = $result['tel'];
+$email = $result['email'];
+$Khoahoc = $result['Khoahoc'];
+if($result['TìnhTrangThanhToan']==0)  $TinhTrangThanhToan='chưa';else$TinhTrangThanhToan='rồi';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +31,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-	<link rel="stylesheet" href="../css/thongtin.css">
+	<link rel="stylesheet" href="../css/thongtin_style.php">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,45 +45,70 @@ $conn = new mysqli($servername, $username, $password, $dbname);
         window.location.href = "../index.php";
        }
         </script>
-
 <header>
-    <a class="logo_header" href="../index.php">
-        <img src="../images/header/logoHeader.png" alt="">
-    </a>
-    <nav class="content_list">
-        <ul>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="khoahoc.html">Khóa học</a></li>
-            <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
-            <li><a href="tuvan.php">Tư vấn</a></li>
-            <li><a href="giaovien.html">Giáo Viên</a></li>
-            <li><a href="./thithu.html">Thi thử</a></li>
-        </ul>
-    </nav>
-    <nav class="login">
-        <ul>
-        </ul>
-    </nav>
-</header>
-    
-    <section class="thongtin">
+        <a class="logo_header" href="../index.php">
+            <img src="../images/header/logoHeader.png" alt="">
+        </a>
+        <nav class="content_list">
+            <ul>
+                <li><a href="./gioithieu.php">Giới thiệu</a></li>
+                <li><a href="khoahoc.php">Khóa học</a></li>
+                <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
+                <li><a href="tuvan.php">Tư vấn</a></li>
+                <li><a href="giaovien.php">Giáo Viên</a></li>
+                <li><a href="./thithu.php">Thi thử</a></li>
+            </ul>
+        </nav>
+        <?php 
+        error_reporting(E_ERROR | E_PARSE);
+        if ($username=="")
+        echo '
+        <nav class="login">
+            <ul>
+                <li><a href="./dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./dangky.php">Đăng ký</a></li>
+            </ul>
+        </nav>';
+        else
+        {
+           echo'
+            <nav class="login">
+            <ul>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn">
+            ';
+             echo $username;
+             echo'<i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">';
+            echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+            echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                    </div>                     
+                </li>
+            </ul>
+             </nav>';
+        }
+        ?>
+    </header>
+    <div class="hongtin">
 		<div class="khung">
-        	<div class="thongtin_title">
-            	<h1>Chào mừng <?php echo " ". $_SESSION['username'] ?></h1>
-            	<h2>Thông tin tài khoản</h2>
-        	</div>
         	<div class="thongtin_content">
 				<p>
-                	<br>Số điện thoại:<strong><?php echo " ". $_SESSION['tel']  ?></strong>
-                	<br>Email: <strong><?php echo " ".$_SESSION["email"] ?></strong>
-                	<br>Bạn đã đăng kí khóa: <strong><?php echo " ".$_SESSION["Khoahoc"] ?></strong>
-                	<br>Bạn  <strong><?php echo " ".$_SESSION['TinhTrangThanhToan'] ?></strong> thanh toán 
+                    Tên tài khoản:<strong><?php echo $username  ?></strong>
+                	<br>Số điện thoại:<strong><?php echo $tel  ?></strong>
+                	<br>Email: <strong><?php echo $email ?></strong>
+                    <br>Ngày đăng ký: <strong><?php echo $date ?></strong>
+                    <br>
+                    <div class="khoahoc">
+                	<br>Bạn đã đăng kí khóa: <strong><?php echo $Khoahoc ?></strong>
+                	<br>Bạn  <strong><?php echo $TinhTrangThanhToan ?></strong> thanh toán 
+                    <br>
+                    <a href="web/huongdanthanhtoan.php">Hướng dẫn thanh toán</a>
 					<br>
+                  </div>
             	</p>
-            <button onclick="myFunction()">Đăng xuất</button>
         	</div>
 		</div>
-    </section>
+    </div>
 
     <footer>
         <div class="logo_footer">
