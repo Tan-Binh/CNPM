@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/css");
-$font_family = 'Arial, Helvetica, sans-serif';
+$font_family = 'Roboto, sans-serif';
 $font_size = '0.7em';
 $border = '1px solid';
 ?>
@@ -68,9 +68,9 @@ $border = '1px solid';
 .dangnhap_khung
 {
     border:1px solid black;
-    width: 80%;
+    width: 78%;
     border-radius: 10px;
-    height: 38px;
+    height: 42px;
     background-color: white;
     margin-bottom: 2%;
     margin-left:6%
@@ -105,10 +105,9 @@ $border = '1px solid';
     text-align: center;
     margin-top: 3%;
     margin-left: 10%;
-    padding: 10px;
     position: absolute;
-    width: 100px;
-    height: 40px;
+    width: 110px;
+    height: 42px;
     padding:4px 11px; 
     background: #318FB5;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
@@ -124,8 +123,9 @@ $border = '1px solid';
 }
 .btn_text
 {
-    width: 100%;
+    width: 90%;
     text-align: center;
+    margin-bottom:2px;
 }
 .dangnhap_ghinho
 {

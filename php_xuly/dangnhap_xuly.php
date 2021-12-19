@@ -22,7 +22,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
         session_start();
 				   $_SESSION['name'] = $user;
 						// Redirect user to index.php
-				   header("Location: ../index.html");
+				   header("Location: ../index-user.php?user=".$username);
     }
 }
 ?>
