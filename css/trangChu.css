@@ -96,11 +96,14 @@ html {
     background: #4382BC;
     border: none;
     border-radius: 20px;
-    color: white;
     font-size: 20px;
 }
 .khoa_hoc .content .list .element .btn_dang_ky button:hover {
     background: #0f385f;
+}
+.khoa_hoc .content .list .element .btn_dang_ky button a {
+    text-decoration: none;
+    color: white;
 }
 .khoa_hoc .content .list .element .chi_tiet {
     text-align: center;

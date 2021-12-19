@@ -62,7 +62,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="web/course-2.html">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -73,7 +73,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -84,7 +84,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -95,7 +95,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -106,7 +106,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -137,7 +137,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -148,7 +148,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -159,7 +159,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -170,7 +170,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
             </div>
