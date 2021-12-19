@@ -160,41 +160,72 @@ $username = $_SESSION['username'];
                 </div>
             </div>
         </div>
-        <section class="lienhe">
-        <div class="lienhe_content">
-            <form class="form_lienhe" action="php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
-                <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
-                <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
-                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên" required>
-                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại" required>
-                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email" required>
-                <br>
-                <select id="khoahoc" name="khoahoc" class="input_khoahoc" required>
-                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
-                    <option value="N5">N5</option>
-                    <option value="N4">N4</option>
-                    <option value="N3">N3</option>
-                    <option value="N2">N2</option>
-                    <option value="N1">N1</option>
-                </select>
-                
-                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
-                <div id = "result" >
-    <?PHP
-                    $thongbao="";
-                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
-                  {
-                     $thongbao="Cảm ơn bạn đã liên hệ";
-                  }
-                  echo '<span style="color: #F52000; font-weight:bold;
-                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
-    ?>
-    
-    </div>
-            </form>
-           
+        <div class="content">
+            <div class="select">
+                <p>
+                    Khóa combo
+                </p>
+            </div>
+            <div class="list">
+                <div class="element">
+                    <p class="level">N5 + N4</p>
+                    <hr>
+                    <p>Học phí:</p>
+                    <p class="value">1000000VND</p>
+                    <p>Thời hạn:
+                    <p>
+                    <p class="value">6 tháng</p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                </div>
+                <div class="element">
+                    <p class="level">N4 + N3</p>
+                    <hr>
+                    <p>Học phí:</p>
+                    <p class="value">1000000VND</p>
+                    <p>Thời hạn:
+                    <p>
+                    <p class="value">6 tháng</p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                </div>
+                <div class="element">
+                    <p class="level">N3 + N2</p>
+                    <hr>
+                    <p>Học phí:</p>
+                    <p class="value">1000000VND</p>
+                    <p>Thời hạn:
+                    <p>
+                    <p class="value">6 tháng</p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                </div>
+                <div class="element">
+                    <p class="level">N2 + N1</p>
+                    <hr>
+                    <p>Học phí:</p>
+                    <p class="value">1000000VND</p>
+                    <p>Thời hạn:
+                    <p>
+                    <p class="value">6 tháng</p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                </div>
+                <div class="element">
+                    <p class="level">N1 + kaiwa</p>
+                    <hr>
+                    <p>Học phí:</p>
+                    <p class="value">1000000VND</p>
+                    <p>Thời hạn:
+                    <p>
+                    <p class="value">6 tháng</p>
+                    <p class="btn_dang_ky"><button><a href="./web/course-2.html">Đăng ký ngay</a></button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                </div>
+            </div>
         </div>
     </section>
+      
 
 
     <section class="trangchu_sensei">
@@ -258,27 +289,39 @@ $username = $_SESSION['username'];
 
     <section class="lienhe">
         <div class="lienhe_content">
-            <form class="form_lienhe" action="../php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe" >
+            <form class="form_lienhe" action="php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
                 <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
                 <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
-                <br><input type="text" class="input_hvt" name="" placeholder="Nhập họ và tên">
-
-                <br><input type="tel" class="input_tel" name="" placeholder="Nhập số điện thoại">
-                <br><input type="email" class="input_email" name="" placeholder="Nhập email">
+                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên" required>
+                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại" required>
+                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email" required>
                 <br>
-                <select name="khoahoc" class="input_khoahoc" required>
-                    <option value="" disabled selected hidden>Chọn khóa học muốn được tư vấn</option>
+                <select id="khoahoc" name="khoahoc" class="input_khoahoc" required>
+                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
                     <option value="N5">N5</option>
                     <option value="N4">N4</option>
                     <option value="N3">N3</option>
                     <option value="N2">N2</option>
                     <option value="N1">N1</option>
                 </select>
-                <br><input type="button" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn">
+                
+                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
+                <div id = "result" >
+    <?PHP
+                    $thongbao="";
+                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
+                  {
+                     $thongbao="Cảm ơn bạn đã liên hệ";
+                  }
+                  echo '<span style="color: #F52000; font-weight:bold;
+                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
+    ?>
+    
+    </div>
             </form>
+           
         </div>
     </section>
-
     <footer>
         <div class="logo_footer">
             <img src="./images/footer/logoFooter.png" alt="">
