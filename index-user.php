@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$usrname = "root";
+$password = "100201";
+$dbname = "DEMO";
+$username = $_GET['user'];
+$conn = new mysqli($servername, $usrname, $password, $dbname);
+if($conn)
+{
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="./js/khoaHoc.js"></script>
 </head>
 
 <body>
@@ -34,8 +46,13 @@
         </nav>
         <nav class="login">
             <ul>
-                <li><a href="web/dangnhap.php">Đăng nhập</a></li>
-                <li><a href="web/dangky.php">Đăng ký</a></li>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn"><?php echo $username?><i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">
+                        <a href="vanhoanhatban.html">Thông tin cá nhân</a>
+                        <a href="duhocnhatban.html">Đăng xuất</a>
+                    </div>                     
+                </li>
             </ul>
         </nav>
     </header>
@@ -62,8 +79,8 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button onclick="Redirect()">Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="web/course-2.html">>>Xem chi tiết</a></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
+                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
                     <p class="level">N4</p>
@@ -73,7 +90,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -84,7 +101,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -95,7 +112,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -106,7 +123,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
             </div>
@@ -126,8 +143,8 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
+                    <p class="chi_tiet btn-more"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
                     <p class="level">N4 + N3</p>
@@ -137,18 +154,18 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
                     <p class="level">N3 + N2</p>
                     <hr>
                     <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
+                    <p class="value ">1000000VND</p>
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -159,7 +176,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -170,7 +187,7 @@
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky btn-more"><button>Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
             </div>
