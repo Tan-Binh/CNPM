@@ -14,7 +14,9 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/kimono.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Trang phục truyền thống</title>
 </head>
 
@@ -64,11 +66,7 @@ $username = $_SESSION['username'];
         ?>
     </header>
     <section id="kimono">
-<<<<<<< Updated upstream:web/kimono.html
-        <a href="./vanHoaNhatBan.html" class="back"> < Quay lại</a>
-=======
         <a href="./vanHoaNhatBan.php" class="back"> < Quay lại</a>
->>>>>>> Stashed changes:web/kimono.php
         <h1>
             KIMONO - TRANG PHỤC TRUYỀN THỐNG
         </h1>

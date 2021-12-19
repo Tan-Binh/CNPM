@@ -15,7 +15,9 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/vanHoaNhatBan.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Văn hóa Nhật Bản</title>
 </head>
 

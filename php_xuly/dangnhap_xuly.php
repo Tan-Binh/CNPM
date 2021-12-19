@@ -20,15 +20,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
             setcookie ("member_login",$_POST["member_name"],time()+ 600,"/");
         }
         session_start();
-<<<<<<< Updated upstream
-				   $_SESSION['name'] = $user;
-						// Redirect user to index.php
-				   header("Location: ../index.html");
-=======
                     $_SESSION['result']= $result;
                     $_SESSION['username'] =$username;
 				   header("Location: ../index.php?user=".$username);
->>>>>>> Stashed changes
     }
 }
 ?>

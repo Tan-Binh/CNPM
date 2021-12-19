@@ -72,7 +72,7 @@ $username = $_SESSION['username'];
     </div>
     <div class="gap-60"></div>
     <div class="content-course">
-      <div class="course col-960px">
+      <div class="course1 col-960px">
         <div class="course-title">
           <p class="course-text font-3rem">KHOÁ HỌC</p>
         </div>

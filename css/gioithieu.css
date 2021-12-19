@@ -1,16 +1,13 @@
 /* CSS Document */
 * {
+    font-family: 'Roboto','sans-serif';
     margin: 0;
     padding: 0;
 }
-@font-face {
-    font-family: WorkSans;
-    src: url(../fonts/WorkSans.ttf);
-}
-html {
-    font-family: WorkSans;
-}
 #gioithieu {
+    width:60%;
+	margin:auto;
+    font-size:120%;
     margin-top: 120px;
     padding: 50px 70px;
 	background: url(../images/van_hoa/nenhoakimono.png) bottom center /100% no-repeat 

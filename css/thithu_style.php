@@ -5,6 +5,7 @@ $font_size = '0.7em';
 $border = '1px solid';
 ?>
 * {
+    font-family: 'Roboto','sans-serif';
     margin: 0;
     padding: 0;
 }

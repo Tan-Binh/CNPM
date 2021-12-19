@@ -38,8 +38,10 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="./css/trangChu_style.php">
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
-
-    <title>fuji nihongo</title>
+    <title>Fuji Nihongo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -109,13 +111,8 @@ $username = $_SESSION['username'];
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-<<<<<<< Updated upstream
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-=======
                     <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="web/course-2.php">>>Xem chi tiết</a></p>
->>>>>>> Stashed changes
                 </div>
                 <div class="element">
                     <p class="level">N4</p>
@@ -125,7 +122,7 @@ $username = $_SESSION['username'];
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -136,7 +133,7 @@ $username = $_SESSION['username'];
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -147,7 +144,7 @@ $username = $_SESSION['username'];
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
                 <div class="element">
@@ -158,76 +155,11 @@ $username = $_SESSION['username'];
                     <p>Thời hạn:
                     <p>
                     <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
+                    <p class="btn_dang_ky"><button class="btn-more-index">Đăng ký ngay</button></p>
                     <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
                 </div>
             </div>
         </div>
-<<<<<<< Updated upstream
-        <div class="content">
-            <div class="select">
-                <p>
-                    Khóa combo
-                </p>
-            </div>
-            <div class="list">
-                <div class="element">
-                    <p class="level">N5 + N4</p>
-                    <hr>
-                    <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
-                    <p>Thời hạn:
-                    <p>
-                    <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-                </div>
-                <div class="element">
-                    <p class="level">N4 + N3</p>
-                    <hr>
-                    <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
-                    <p>Thời hạn:
-                    <p>
-                    <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-                </div>
-                <div class="element">
-                    <p class="level">N3 + N2</p>
-                    <hr>
-                    <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
-                    <p>Thời hạn:
-                    <p>
-                    <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-                </div>
-                <div class="element">
-                    <p class="level">N2 + N1</p>
-                    <hr>
-                    <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
-                    <p>Thời hạn:
-                    <p>
-                    <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-                </div>
-                <div class="element">
-                    <p class="level">N1 + kaiwa</p>
-                    <hr>
-                    <p>Học phí:</p>
-                    <p class="value">1000000VND</p>
-                    <p>Thời hạn:
-                    <p>
-                    <p class="value">6 tháng</p>
-                    <p class="btn_dang_ky"><button>Đăng ký ngay</button></p>
-                    <p class="chi_tiet"><a href="#">>>Xem chi tiết</a></p>
-                </div>
-            </div>
-=======
         <section class="lienhe">
         <div class="lienhe_content">
             <form class="form_lienhe" action="php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
@@ -261,7 +193,6 @@ $username = $_SESSION['username'];
     </div>
             </form>
            
->>>>>>> Stashed changes
         </div>
     </section>
 
@@ -298,11 +229,7 @@ $username = $_SESSION['username'];
             <p class="gioithieu_sensei_content">Đội ngũ giáo viên có trình độ N2-N1 và kinh nghiệm
                 2 năm giảng dạy trở lên là một nhân tố quan trọng trong
                 việc tạo nên sự thành công trong chất lượng đào tạo tại FujiFuji</p>
-<<<<<<< Updated upstream
-            <nav class="gioithieu_sensei_content_btn"><a href="" class="gioithieu_sensei_anchor">Đọc thêm...</a></nav>
-=======
             <nav class="gioithieu_sensei_content_btn"><a href="web/giaovien.php" class="gioithieu_sensei_anchor">Đọc thêm...</a></nav>
->>>>>>> Stashed changes
         </div>
 
     </section>
@@ -388,5 +315,4 @@ $username = $_SESSION['username'];
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/trangChu.js"></script>
 </body>
-
 </html>

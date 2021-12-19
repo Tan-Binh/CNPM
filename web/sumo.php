@@ -13,7 +13,9 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/sumo.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Sumo</title>
 </head>
 <body>
@@ -63,11 +65,7 @@ $username = $_SESSION['username'];
     </header>
 
     <section id="sumo">
-<<<<<<< Updated upstream:web/sumo.html
-        <a href="./vanHoaNhatBan.html" class="back"> < Quay lại</a>
-=======
         <a href="./vanHoaNhatBan.php" class="back"> < Quay lại</a>
->>>>>>> Stashed changes:web/sumo.php
         <h1>
             Sumo – Tinh hoa nét đẹp võ thuật truyền thống của Nhật Bản
         </h1>

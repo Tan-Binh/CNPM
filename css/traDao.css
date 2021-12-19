@@ -1,22 +1,16 @@
 * {
+   font-family: 'Roboto','sans-serif';
     margin: 0;
     padding: 0;
 }
-
-@font-face {
-    font-family: WorkSans;
-    src: url(../fonts/WorkSans.ttf);
-}
-
-html {
-    font-family: WorkSans;
-}
-
 .left {
     float: left;
 }
 
 #traDao {
+    width: 60%;
+    margin: auto;
+    font-size: 120%;
     margin-top: 120px;
     padding: 50px 130px;
     background: url(../images/van_hoa/lineTraDao.png) bottom center /90% no-repeat ,url(../images/van_hoa/nenTraDao.png) center /contain no-repeat;
