@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     $result=mysqli_query($conn,"SELECT * FROM dangky where username='$username' and password = '$password'");
     if (mysqli_num_rows($result)==0)
     {
-    echo "Nhập sai username hoặc mật khẩu";
+        header("Location: ../web/dangnhap.php?success=2");
     }
     else
     {
@@ -20,9 +20,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
             setcookie ("member_login",$_POST["member_name"],time()+ 600,"/");
         }
         session_start();
-				   $_SESSION['name'] = $user;
-						// Redirect user to index.php
-				   header("Location: ../index.html");
+                    $_SESSION['result']= $result;
+                    $_SESSION['username'] =$username;
+				   header("Location: ../index.php?user=".$username);
     }
 }
 ?>

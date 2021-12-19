@@ -1,3 +1,8 @@
+<?php
+session_start();
+$username="";
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/header.css" />
   <link rel="stylesheet" href="../css/footer.css" />
@@ -22,20 +29,43 @@
     </a>
     <nav class="content_list">
         <ul>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="khoahoc.html">Khóa học</a></li>
-            <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+            <li><a href="./gioithieu.php">Giới thiệu</a></li>
+            <li><a href="khoahoc.php">Khóa học</a></li>
+            <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
             <li><a href="tuvan.php">Tư vấn</a></li>
-            <li><a href="giaovien.html">Giáo Viên</a></li>
-            <li><a href="./thithu.html">Thi thử</a></li>
+            <li><a href="giaovien.php">Giáo Viên</a></li>
+            <li><a href="./thithu.php">Thi thử</a></li>
         </ul>
     </nav>
+    <?php 
+    error_reporting(E_ERROR | E_PARSE);
+    if ($username=="")
+    echo '
     <nav class="login">
         <ul>
             <li><a href="./dangnhap.php">Đăng nhập</a></li>
             <li><a href="./dangky.php">Đăng ký</a></li>
         </ul>
-    </nav>
+    </nav>';
+    else
+    {
+       echo'
+        <nav class="login">
+        <ul>
+        <li class="dropdown ">
+                <a href="#" class="dropbtn">
+        ';
+         echo $username;
+         echo'<i class="fa fa-caret-down"></i></a>   
+                <div class="dropdown-content">';
+        echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+        echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                </div>                     
+            </li>
+        </ul>
+         </nav>';
+    }
+    ?>
 </header>
 
   <div class="gap-60"></div>
@@ -180,7 +210,7 @@
             </div>
           </div>
 
-          <button class="btn-more"><a href="./course-2.html">Xem chi tiết</a></button>
+          <button class="btn-more"><a href="./course-2.php">Xem chi tiết</a></button>
           <div class="gap-20"></div>
         </div>
       </div>

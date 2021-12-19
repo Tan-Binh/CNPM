@@ -1,8 +1,8 @@
 * {
+    font-family: 'Roboto','sans-serif';
     margin: 0;
     padding: 0;
 }
-
 @font-face {
     font-family: WorkSans;
     src: url(../fonts/WorkSans.ttf);
@@ -17,6 +17,8 @@ html {
 }
 
 #kimono {
+width: 60%;
+    margin: auto;
     margin-top: 120px;
     padding: 50px 130px;
     background: url(../images/van_hoa/nenhoakimono.png) bottom center /100% no-repeat ,url(../images/van_hoa/nenkimono.png) center /contain no-repeat;

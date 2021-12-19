@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/css");
-$font_family = 'Arial, Helvetica, sans-serif';
+$font_family = 'Roboto, sans-serif';
 $font_size = '0.7em';
 $border = '1px solid';
 ?>
@@ -24,7 +24,7 @@ html {
     background: white;
 }
 .banner img {
-    width: 90%;
+    width: 70%;
 }
 /*banner end*/
 
@@ -36,13 +36,17 @@ html {
     text-align: center;
 }
 .khoa_hoc .content {
-    height: 367px;
-    background: url(../images/khoa_hoc/nen_khoa_hoc.png) center top no-repeat;
+    height: 407px;
+    background: url(../images/khoa_hoc/nen_khoa_hoc.png) center top no-repeat ;
+    margin-top:200px;
     display: flex;
+    margin-top:60px;
+    margin-bottom:30px;
+    
 }
 .khoa_hoc .content .select {
     width: 20%;
-    margin: 100px 0;
+    margin: 100px 0px;
     background: #1C71AD;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -51,9 +55,10 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom:150px;
 }
 .khoa_hoc .content .select p {
-    margin: 5px 0px 5px 20% ;
+    margin: 5px 0px 20px 20% ;
     padding: 7px;
     background: white;
     border-top-left-radius: 30px;
@@ -67,20 +72,24 @@ html {
 }
 .khoa_hoc .content .list {
     width: 65%;
-    margin-top: 60px;
     padding: 5px 5%;
     display: flex;
+    
 }
 .khoa_hoc .content .list .element {
-    top: 30%;
+    width:150px;
     right: 30%;
-    margin: 0px 20px ;
+    margin: 48px 10px ;
+    margin-left:5px;
     padding: 0px 7px ;
     background: white;
     box-shadow: 0px 2px 5px gray;
     box-sizing: border-box;
     color: #666666;
     font-size: 25px;
+    padding-bottom:30px;
+    padding-left:20px;
+    
 }
 .khoa_hoc .content .list .element .level {
     padding: 15px 0px;
@@ -234,7 +243,6 @@ background-color: grey;
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 18px;
     text-align: center;
-    background-image: url("../images/van_hoa/bgr_dot_01.png"), url("../images/van_hoa/Ellipse\ 4.png.png") , url("../images/van_hoa/Ellipse\ 5.png"), url("../images/van_hoa/Ellipse\ 6.png"), url("../images/van_hoa/Ellipse\ 7.png"),url("../images/van_hoa/Ellipse\ 8.png");
     background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
     background-size: 304px 304px,166px 313px,333px 105px,207px 149px, 103px 103px,80px 80px;
     background-position:top left,bottom right,center bottom,top right 50px,bottom left,top left 50px;
@@ -277,11 +285,9 @@ background-color: grey;
 }
 .vanhoa_style
 {
-    color: #4382BC;
+    color: rgb(67,130,188);
     font-weight: bold;
     font-size: 40px;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #D9EDF4;
     margin-bottom: 20px;
 }
 /*Văn hóa end*/
@@ -289,21 +295,24 @@ background-color: grey;
 /*Liên hệ begin*/
 .lienhe
 {
-    font-size: 20px;
+    font-size: 120%;
     background-image: url(../images/lien_he/image12.png);
     background-size: cover;
-    padding: 20px 22% 40px 22%;
+    margin-top:25px;
+    padding: 20px 22% 60px 26%;
+    padding-right:26%;
 }
 .lienhe_content
 {
     width: 100%;
-    margin-top: 4%;
+    margin-top: 15%;
     padding: 10px 0px;
     background-color: rgba(255, 255, 255, 0.4);
 }
 .form_lienhe
 {  
     margin: auto 0;
+    margin-left:30px;
     box-sizing: border-box;
 }
 .form_lienhe h3,
@@ -318,24 +327,27 @@ background-color: grey;
 }
 .form_lienhe .input_hvt
 {
+    padding-left:15px;
     margin-left:15%;
     border-radius: 5px;
     border: none;
-    width: 70%;
-    height: 40px;
+    width: 60%;
+    height: 60px;
     font-size: 20px;
 }
 .form_lienhe .input_tel,
 .form_lienhe .input_email,
 .form_lienhe .input_khoahoc
 {
+    border:none;
+    padding-left:15px;
     border-radius: 5px;
     border: none;
     margin-left:15%;
     font-size: 20px;
-    width: 70%;
-    margin-top:50px;
-    height: 40px;
+    width: 60%;
+    margin-top:20px;
+    height: 60px;
 }
 .form_lienhe .input_khoahoc:invalid
 {
@@ -344,7 +356,7 @@ background-color: grey;
 .form_lienhe .input_btn
 {
     box-shadow: 3px 3px 1px 1px grey;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     border-radius: 30px;
     background-color: #59BCC2;

@@ -9,41 +9,15 @@ $username = $_SESSION['username'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/lienhe_style.php">
-    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <link rel="stylesheet" href="../css/gioithieu.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>fuji nihongo</title>
-    <script>
-         $(document).ready(function() 
-        {
-        $("#tuvan").click(function() 
-        {
-        var name = $("#hvt").val();
-        var email = $("#email").val();
-        var tel= $("#tel").val();
-        var e = document.getElementById("khoahoc");
-        var khoahoc=e.value;
-        if (name == '' || tel  == ''||email == ''||  khoahoc == "1") 
-        {
-        alert("Mời bạn nhập đầy đủ thông tin");
-        $('#lienhe').attr('onSubmit','return false');
-        } 
-        else
-        {
-            $('#lienhe').attr('onSubmit','return true')}
-        })
-        $('#lienhe').attr('onSubmit','return false');
-        });
-    </script>
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Giới Thiệu</title>
 </head>
 <body>
 <header>
@@ -91,44 +65,38 @@ $username = $_SESSION['username'];
         ?>
     </header>
 
-
-    <section class="lienhe">
-        <div class="lienhe_content">
-            <form class="form_lienhe" action="../php_xuly/lienhe_xuly.php" method="POST" id="lienhe" name="lienhe">
-                <h3>HÃY CÙNG CHINH PHỤC TIẾNG NHẬT</h3>
-                <p class="lienlac">Hãy liên lạc với chúng tôi để nhận được tư vấn!</p>
-                <br><input type="text" class="input_hvt" name="hvt" id="hvt" placeholder="Nhập họ và tên">
-                <br><input type="tel" class="input_tel" name="tel" id="tel" placeholder="Nhập số điện thoại">
-                <br><input type="email" class="input_email" name="email" id="email" placeholder="Nhập email">
-                <br>
-                <select id="khoahoc" name="khoahoc" class="input_khoahoc">
-                    <option value="1" disabled selected>Chọn khóa học muốn được tư vấn</option>
-                    <option value="N5">N5</option>
-                    <option value="N4">N4</option>
-                    <option value="N3">N3</option>
-                    <option value="N2">N2</option>
-                    <option value="N1">N1</option>
-                </select>
-                
-                <br><input type="submit" value="ĐĂNG KÝ NHẬN TƯ VẤN" class="input_btn" id="tuvan" name="tuvan">
-                <div id = "result" >
-    <?PHP
-                    $thongbao="";
-                  if ( isset($_GET['success']) && $_GET['success'] == 1 )
-                  {
-                     $thongbao="Cảm ơn bạn đã liên hệ";
-                  }
-                  echo '<span style="color: #F52000; font-weight:bold;
-                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
-    ?>
-    
-    </div>
-            </form>
-           
-        </div>
+    <section id="gioithieu">
+		<div class="body">
+        <h1>
+            Fuji Nihongo - Tiếng Nhật vì tương lai Việt
+        </h1>
+        <p>
+			Xuất phát từ niềm đam mê với những giá trị của đất nước mặt trời mọc, Nhật ngữ Fuji Nihongo được thành lập với muốn tạo ra một môi trường học tập tiếng Nhật đột phá ngay tại Việt Nam, trở thành cầu nối giúp các bạn trẻ Việt có tiếp cận cơ hội học tập và làm việc tại Nhật Bản.
+        </p>
+		<p>
+			<strong>"Tiếng Nhật vì tương lai Việt"</strong> đây là kim chỉ nam giúp Fuji Nihongo luôn nổ lực để tạo ra một môi trường học tập hiện đại và đột phá hơn so với phương pháp dạy truyền thống hiện nay.Tại Fuji các học viên không những học được tiếng Nhật mà còn thẩm thấu một cách tự nhiên văn hóa và tinh thần Nhật Bản truyền cảm hứng cho học viên nỗ lực, trưởng thành hơn mỗi ngày.
+		</p>
+        <p>
+			Nhật ngữ Fuji Nihongo luôn nỗ lực để tạo ra một môi trường học tập hiện đại và đột phá hơn so với phương pháp dạy truyền thống hiện nay. Tại Fuji Nihongo các học viên không những học được tiếng Nhật mà còn thẩm thấu một cách tự nhiên văn hóa và tinh thần Nhật Bản truyền cảm hứng cho học viên nỗ lực, trưởng thành hơn mỗi ngày.
+        </p>
+        <p class="image">
+            <img class="hinh1" src="../images/gioithieu/gt1.jpg" alt="">
+        </p>
+        <p>
+            Lớp học được thiết kế với số lượng học viên vừa phải từ 8 - 20 học viên để có thể theo sát và hỗ trợ từng học viên một cách tốt nhất. Từ N5 đến N3 các học viên đều được học tất cả các kỹ năng nghe, nói, đọc, viết cùng KANJI học và có thể sử dụng được cũng là một trong những phương châm của Fuji Nihongo.
+        </p>
+		<p class="image">
+            <img class="hinh1" src="../images/gioithieu/gt3.jpg" alt="">
+        </p>
+        <p>
+            Đội ngũ giáo viên tại trung tâm trẻ trung, năng động với trình độ tiếng Nhật N2 và N1 cùng phương pháp dạy cuốn hút. Giáo viên đã từng có cơ hội trải nghiệm training, du học và làm việc tại Nhật. Nhờ đó, trung tâm có thể hiểu rõ được các khó khăn khi học tiếng Nhật cũng như cuộc sống và văn hóa tại Nhật như thế nào để có thể hướng dẫn và hỗ trợ học viên một cách tốt nhất. Cùng với nhân viên chăm sóc học viên, hỗ trợ học bù khi vắng học cũng như không theo kịp bài, hỗ trợ lên lớp hoặc xuống lớp tùy theo trình độ và nguyện vọng của học viên.
+        </p>
+		<p class="image">
+            <img class="hinh1" src="../images/gioithieu/gt4.jpg" alt="">
+        </p>
+			</div>
     </section>
 
- 
     <footer>
         <div class="logo_footer">
             <img src="../images/footer/logoFooter.png" alt="">
@@ -155,13 +123,6 @@ $username = $_SESSION['username'];
         </div>
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
-        <div class="dialog_overlay" id="dialog_overlay">
-            <div class="dialog-body">
-                <h3 id="dialog_title"></h3>
-                <p id="dialog_content"></p>
-            </div>
-        </div>
     </footer>
-
 </body>
 </html>

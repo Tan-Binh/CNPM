@@ -1,37 +1,53 @@
-
+<?php
+session_start();
+$username="";
+$username = $_SESSION['username'];
+?>
+<?php
+session_start();
+function alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+}
+$servername = "localhost";
+$usrname = "root";
+$password = "100201";
+$dbname = "DEMO";
+$conn = new mysqli($servername, $usrname, $password, $dbname);
+$username = $_GET['username'];
+$result=mysqli_query($conn,"SELECT * FROM dangky where username='$username'");
+$result=mysqli_fetch_array($result);
+$date= $result['register_date'];
+$tel = $result['tel'];
+$email = $result['email'];
+$Khoahoc = $result['Khoahoc'];
+if($result['TìnhTrangThanhToan']==0)  $TinhTrangThanhToan='chưa';else$TinhTrangThanhToan='rồi';
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/dangnhap_style.php">
-    <link rel="stylesheet" href="../fontawesome/css/all.css">
-    <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/thongtin_style.php">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <link rel="icon" href="./images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Đăng nhập</title>
-    <script>
-        $(document).ready(function() {
-            $("#login").click(function() {
-                var name = $("#username").val();
-                var password = $("#pwd").val();
-                if (name == '' || password == '') {
-                    alert("Mời bạn nhập đầy đủ thông tin");
-                    $('#formID').attr('onSubmit', 'return false');
-                };
-            });
-        });
-    </script>
+    <title>fuji nihongo</title>
 </head>
-
 <body>
+    <script>
+       function myFunction()
+       {
+        window.location.href = "../index.php";
+       }
+        </script>
 <header>
         <a class="logo_header" href="../index.php">
             <img src="../images/header/logoHeader.png" alt="">
@@ -76,57 +92,36 @@
         }
         ?>
     </header>
-    <section id="dangnhap">
-        <div class="dangnhap_form">
-            <form class="dangnhap_for" id="formID" action="../php_xuly/dangnhap_xuly.php" method="Post">
-                <h3 class="dangnhap_inline" style="color: #318FB5;">Đăng nhập
-                    <hr class="dangnhap_hr">
-                </h3>
-                <nav class="dangnhap_inline1">
-                    <h3><a class="dangnhap_anchor" href="dangky.php">Tạo tài khoản</a>
-                        <hr class="dangnhap_hr">
-                    </h3>
-                </nav>
-                <br>
-                <div class="dangnhap_khung"><i class="fas fa-user fa-2x icon_khung"></i>
-                    <div class="vl"></div>
-                    <input type="text" class="dangnhap_input" id="username" name="username" placeholder="Nhập tên đăng nhập hoặc email">
-                </div>
-                <br>
-                <div class="dangnhap_khung"><i class="fas fa-key fa-2x icon_khung"></i>
-                    <div class="vl"></div>
-                    <input type="password" class="dangnhap_input" name="pwd" id="pwd" placeholder="Nhập mật khẩu ">
+    <div class="hongtin">
+		<div class="khung">
+        	<div class="thongtin_content">
+				<p>
+                    Tên tài khoản:<strong><?php echo $username  ?></strong>
+                	<br>Số điện thoại:<strong><?php echo $tel  ?></strong>
+                	<br>Email: <strong><?php echo $email ?></strong>
+                    <br>Ngày đăng ký: <strong><?php echo $date ?></strong>
                     <br>
-                    <?php if ($_GET['success']==2) echo '<p style="text-align: center;margin-top:5px;margin-left:120px;color:red; font-weight:bold"> Tài khoản hoặc mật khẩu sai *</p>' ;
-
-                    ?>
-                  
-                </div>
-                <br>
+                    <div class="khoahoc">
+                	<br>Bạn đã đăng kí khóa: <strong><?php echo $Khoahoc ?></strong>
+                	<br>Bạn  <strong><?php echo $TinhTrangThanhToan ?></strong> thanh toán 
                     <br>
-                <div class="remember">
-                    <input type="checkbox" name="Ghi nhớ đăng nhập" id="remember" value="1">
-                    <label class="dangnhap_ghinho">Ghi nhớ đăng nhập</label>
-                    <a class="dangnhap_quenmatkhau" href="">Quên mật khẩu</a>
-                    <input type="submit" class="dangnhap_btn" value="Đăng nhập" name="login" id="login">
-                 
-                </div>
-
-            </form>
-        </div>
-    </section>
+                    <a href="web/huongdanthanhtoan.php">Hướng dẫn thanh toán</a>
+					<br>
+                  </div>
+            	</p>
+        	</div>
+		</div>
+    </div>
 
     <footer>
         <div class="logo_footer">
             <img src="../images/footer/logoFooter.png" alt="">
         </div>
         <div class="Thongtin" width="500px">
-            <strong>
-                <p class="title_1">THÔNG TIN LIÊN HỆ</p>
-            </strong>
+            <strong><p class="title_1">THÔNG TIN LIÊN HỆ</p></strong>
             <hr class="hr_white">
             <hr class="hr_blue">
-            <p>
+            <p> 
                 <i class="far fa-envelope icon1"></i>&nbsp;<a href="mailto:fujinihongo@gmail.com" class="anchor1">fujinihongo@gmail.com</a>
                 <br><br><i class="fas fa-phone-alt icon1"></i> 0382468820
                 <br><br><i class="far fa-calendar-check icon1"></i> Thứ 2- Thứ 7: 8h - 15h
@@ -134,9 +129,7 @@
             </p>
         </div>
         <div class="Ketnoi">
-            <strong>
-                <p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p>
-            </strong>
+            <strong><p class="title_1">KẾT NỐI VỚI CHÚNG TÔI</p></strong>
             <hr class="hr_white">
             <hr class="hr_blue">
             <br>
@@ -146,7 +139,13 @@
         </div>
         <hr class="hr_footer">
         <p class="footer_copyright">Copyright © 2021 FujiNihongo. All Rights Reserved.</p>
+        <div class="dialog_overlay" id="dialog_overlay">
+            <div class="dialog-body">
+                <h3 id="dialog_title"></h3>
+                <p id="dialog_content"></p>
+            </div>
+        </div>
     </footer>
-</body>
 
+</body>
 </html>

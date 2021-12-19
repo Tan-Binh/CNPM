@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/css");
-$font_family = 'Arial, Helvetica, sans-serif';
+$font_family = 'Roboto, sans-serif';
 $font_size = '0.7em';
 $border = '1px solid';
 ?>
@@ -45,7 +45,7 @@ $border = '1px solid';
 .dangki_inline
 {
     text-align: center;
-    width: 50%;
+    width: 40%;
     display: inline-block;
 
     margin-bottom: 5%;
@@ -67,9 +67,9 @@ $border = '1px solid';
 .dangki_khung
 {
     border:1px solid black;
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
-    height: 38px;
+    height: 40px;
     background-color: white;
     margin-bottom: 2%;
 }
@@ -92,7 +92,7 @@ $border = '1px solid';
     position: absolute;
     margin-left: 10%;
     width:90px;
-    height: 40px;
+    height: 45px;
     padding:4px 14px; 
     font-size: 18px;
     background: #318FB5;
@@ -106,6 +106,7 @@ $border = '1px solid';
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+
 }
 .dangki_anchor
 {

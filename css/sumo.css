@@ -1,4 +1,5 @@
 * {
+    font-family: 'Roboto','sans-serif';
     margin: 0;
     padding: 0;
 }
@@ -13,6 +14,8 @@ html {
 }
 
 #sumo {
+    width: 60%;
+    margin: auto;
     margin-top: 120px;
     padding: 50px 130px;
     background: url(../images/van_hoa/linesumo.png) bottom center /90% no-repeat ,url(../images/van_hoa/nensumo.png) center /contain no-repeat;

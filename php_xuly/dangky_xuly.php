@@ -22,20 +22,20 @@ $password = md5($_POST['pwd']);
 $register_date = date("Y-m-d H:i:s");
 if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE email='$email'"))>0)
 {
-echo "Đã tồn tại email";
+  header("Location: ../web/dangky.php?no=2");
 }
 else
 {
 if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM dangky WHERE username='$username'"))>0)
 {
-echo "Đã tồn tại tài khoản";
+  header("Location: ../web/dangky.php?no=1");
 }
 else
 {
   $sql = " INSERT INTO dangky (username,tel, email, password, register_date) VALUES ('$username','$tel', '$email', '$password','$register_date')";
   if (mysqli_query($conn, $sql)) 
   {
-    echo "New record created successfully";
+    header("Location: ../web/dangky.php?success=1");
   } else 
   {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

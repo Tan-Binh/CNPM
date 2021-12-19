@@ -3,10 +3,10 @@ function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 $servername = "localhost";
-$username = "id17945965_demo_user";
+$username = "root";
+$password = "100201";
+$dbname = "DEMO";
 
-$password = "]K_yDA{E2g}g2!qK";
-$dbname = "id17945965_demo";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 IF($conn)

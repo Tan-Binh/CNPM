@@ -1,3 +1,8 @@
+<?php
+session_start();
+$username="";
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/vanHoaNhatBan.css">
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Văn hóa Nhật Bản</title>
 </head>
 
@@ -20,20 +28,43 @@
         </a>
         <nav class="content_list">
             <ul>
-                <li><a href="./gioithieu.html">Giới thiệu</a></li>
-                <li><a href="khoahoc.html">Khóa học</a></li>
-                <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
+                <li><a href="./gioithieu.php">Giới thiệu</a></li>
+                <li><a href="khoahoc.php">Khóa học</a></li>
+                <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
                 <li><a href="tuvan.php">Tư vấn</a></li>
-                <li><a href="giaovien.html">Giáo Viên</a></li>
-                <li><a href="./thithu.html">Thi thử</a></li>
+                <li><a href="giaovien.php">Giáo Viên</a></li>
+                <li><a href="./thithu.php">Thi thử</a></li>
             </ul>
         </nav>
+        <?php 
+        error_reporting(E_ERROR | E_PARSE);
+        if ($username=="")
+        echo '
         <nav class="login">
             <ul>
                 <li><a href="./dangnhap.php">Đăng nhập</a></li>
                 <li><a href="./dangky.php">Đăng ký</a></li>
             </ul>
-        </nav>
+        </nav>';
+        else
+        {
+           echo'
+            <nav class="login">
+            <ul>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn">
+            ';
+             echo $username;
+             echo'<i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">';
+            echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+            echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                    </div>                     
+                </li>
+            </ul>
+             </nav>';
+        }
+        ?>
     </header>
 
     <section id="van_hoa_nhat_ban">
@@ -49,7 +80,7 @@
                         Nhật Bản, nhưng hầu hết đều dừng ở mức độ mô tả về trình tự, về chất liệu, hình dạng của dụng cụ
                         pha và uống, về kiến trúc và nội thất của phòng trà …
                     </p>
-                    <a class="tra_dao_color" href="../web/traDao.html">Xem thêm >></a>
+                    <a class="tra_dao_color" href="../web/traDao.php">Xem thêm >></a>
                 </div>
                 <div class="van_hoa_element">
                     <img src="../images/van_hoa/kimono.png" alt="">
@@ -60,7 +91,7 @@
                         phụ nữ sử dụng như trang phục hàng ngày. Tuy nhiên, ngày nay chỉ có phụ nữ Nhật mặc Kimono là
                         chủ yếu còn người đàn ông Nhật thường chỉ mặc Kimono trong các dịp lễ ...
                     </p>
-                    <a class="kimono_color" href="../web/kimono.html">Xem thêm >></a>
+                    <a class="kimono_color" href="../web/kimono.php">Xem thêm >></a>
                 </div>
                 <div class="van_hoa_element">
                     <img src="../images/van_hoa/sumo.png" alt="">
@@ -71,7 +102,7 @@
                         ngưỡng bậc nhất của người dân Nhật. Trong mỗi cuộc thi đấu, các Sumo sẽ thể hiện những điệu múa
                         cổ truyền và một vài nghi lễ chính ...
                     </p>
-                    <a class="sumo_color" href="../web/sumo.html">Xem thêm >></a>
+                    <a class="sumo_color" href="../web/sumo.php">Xem thêm >></a>
                 </div>
             </div>
         </div>

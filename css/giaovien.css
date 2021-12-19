@@ -1,16 +1,12 @@
-
-@font-face {
-    font-family: WorkSans;
-    src: url(../fonts/WorkSans.ttf);
-}
 @font-face {
     font-family: Allura-Regular;
     src: url(../fonts/Allura-Regular.ttf);
 }
-html {
-    font-family: WorkSans;
+* {
+    font-family: 'Roboto','sans-serif';
+    margin: 0;
+    padding: 0;
 }
-  
 .grid {
     margin: 6em 9em;
     padding: 0 1em;
@@ -18,6 +14,7 @@ html {
     text-align: center;
     line-height: 2em;
     font-size: 1.5em;
+
   }
 
 .giaovien-banner img{

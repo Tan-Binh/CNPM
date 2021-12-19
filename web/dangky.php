@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,9 @@
     <link rel="icon" href="../images/title/titleLogo.png" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script>
         $(document).ready(function() 
         {
@@ -49,26 +53,49 @@
 </head>
 <body>
 <header>
-    <a class="logo_header" href="../index.php">
-        <img src="../images/header/logoHeader.png" alt="">
-    </a>
-    <nav class="content_list">
-        <ul>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="khoahoc.html">Khóa học</a></li>
-            <li><a href="./vanHoaNhatBan.html">Văn hóa Nhật Bản</a></li>
-            <li><a href="tuvan.php">Tư vấn</a></li>
-            <li><a href="giaovien.html">Giáo Viên</a></li>
-            <li><a href="./thithu.html">Thi thử</a></li>
-        </ul>
-    </nav>
-    <nav class="login">
-        <ul>
-            <li><a href="./dangnhap.php">Đăng nhập</a></li>
-            <li><a href="./dangky.php">Đăng ký</a></li>
-        </ul>
-    </nav>
-</header>
+        <a class="logo_header" href="../index.php">
+            <img src="../images/header/logoHeader.png" alt="">
+        </a>
+        <nav class="content_list">
+            <ul>
+                <li><a href="./gioithieu.php">Giới thiệu</a></li>
+                <li><a href="khoahoc.php">Khóa học</a></li>
+                <li><a href="./vanHoaNhatBan.php">Văn hóa Nhật Bản</a></li>
+                <li><a href="tuvan.php">Tư vấn</a></li>
+                <li><a href="giaovien.php">Giáo Viên</a></li>
+                <li><a href="./thithu.php">Thi thử</a></li>
+            </ul>
+        </nav>
+        <?php 
+        error_reporting(E_ERROR | E_PARSE);
+        if ($username=="")
+        echo '
+        <nav class="login">
+            <ul>
+                <li><a href="./dangnhap.php">Đăng nhập</a></li>
+                <li><a href="./dangky.php">Đăng ký</a></li>
+            </ul>
+        </nav>';
+        else
+        {
+           echo'
+            <nav class="login">
+            <ul>
+            <li class="dropdown ">
+                    <a href="#" class="dropbtn">
+            ';
+             echo $username;
+             echo'<i class="fa fa-caret-down"></i></a>   
+                    <div class="dropdown-content">';
+            echo "<a href='thongtin.php?username=".$username."'>Thông tin cá nhân</a> ";
+            echo'<a href="../php_xuly/logout.php">Đăng xuất</a> 
+                    </div>                     
+                </li>
+            </ul>
+             </nav>';
+        }
+        ?>
+    </header>
 
     <section id="dangki">
         <div class="dangki_form">
@@ -76,16 +103,21 @@
                 <h3 class="dangki_inline1" style="color: #318FB5;"><a class="dangki_anchor" href="dangnhap.php">Đăng nhập</a><hr class="dangnhap_hr"></h3>
                 <nav class="dangki_inline"><h3 >Tạo tài khoản<hr class="dangki_hr"></h3></nav>
                 <br><div class="dangki_khung"><i class="fas fa-user fa-2x icon_khung"></i><div class="vl"></div>
-                    <input type="text" class="dangki_input" id="username" name="username" placeholder="Nhập tên đăng nhập "> </div>
+                    <input type="text" class="dangki_input" id="username" name="username" placeholder="Nhập tên đăng nhập " required> </div>
+                    <?php if ($_GET['no']==2) echo '<p style="text-align: center;margin-top:5px;margin-left:120px;color:red; font-weight:bold"> Tài khoản đã tồn tại *</p>' ?>
                     <br><div class="dangki_khung"><i class="fas fa-envelope fa-2x icon_khung" ></i></i><div class="vl"></div>
-                    <input type="email" class="dangki_input"id="username" name="email" placeholder="Nhập email "> </div>
+                    <input type="email" class="dangki_input"id="username" name="email" placeholder="Nhập email " required> </div>
+                    <?php if ($_GET['no']==1) echo '<p style="text-align: center;margin-top:5px;margin-left:120px;color:red; font-weight:bold"> Email đã tồn tại *</p>' ?>
                     <br><div class="dangki_khung"><i class="fas fa-phone-alt fa-2x icon_khung"></i><div class="vl"></div>
-                    <input type="tel" class="dangki_input" id="tel" name="tel" placeholder="Nhập số điện thoại "> </div>
+                    <input type="tel" class="dangki_input" id="tel" name="tel" placeholder="Nhập số điện thoại " required> </div>
                 <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu "> </div>
+                <input type="password" class="dangki_input"  name="pwd" id ="pwd" placeholder="Nhập mật khẩu " required> </div>
                 <br><div class="dangki_khung"><i class="fas fa-key fa-2x icon_khung"></i><div class="vl"></div>
-                <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu "> </div>
-                <input type="submit" value="Đăng kí" name="register" id="register" class="dangki_btn">
+                <input type="password" class="dangki_input" id="cnfpwd"  name="confirmpwd" placeholder="Nhập lại mật khẩu " required> </div>
+                <?php if ($_GET['success']==1) echo '<p style="text-align: center;margin-top:5px;margin-left:120px;color:red; font-weight:bold"> Đăng ký thành công </p>' ?>
+
+               
+                <input type="submit" value="Đăng ký" name="register" id="register" class="dangki_btn" >
                 </div>
             </form>
         </div>
