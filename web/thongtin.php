@@ -4,7 +4,6 @@ $username="";
 $username = $_SESSION['username'];
 ?>
 <?php
-session_start();
 function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
@@ -63,7 +62,6 @@ if($result['TìnhTrangThanhToan']==0)  $TinhTrangThanhToan='chưa';else$TinhTran
             </ul>
         </nav>
         <?php 
-        error_reporting(E_ERROR | E_PARSE);
         if ($username=="")
         echo '
         <nav class="login">
@@ -105,7 +103,9 @@ if($result['TìnhTrangThanhToan']==0)  $TinhTrangThanhToan='chưa';else$TinhTran
                 	<br>Bạn đã đăng kí khóa: <strong><?php echo $Khoahoc ?></strong>
                 	<br>Bạn  <strong><?php echo $TinhTrangThanhToan ?></strong> thanh toán 
                     <br>
-                    <a href="web/huongdanthanhtoan.php">Hướng dẫn thanh toán</a>
+                    <h3>Thanh toán qua MOMO với cú pháp: "username_tenkhoahoc"</h3>
+                    <br>
+                    <img src="../images/thongtin/momo-upload-api-buoc-2-190522172522.jpg" width="300" height="300">
 					<br>
                   </div>
             	</p>

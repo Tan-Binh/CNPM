@@ -7,6 +7,7 @@ header("Content-type: text/css");
     font-family: 'Roboto','sans-serif';
     font-size:120%;
     background-image: url('../images/thongtin/Body.png');
+    background-repeat: no-repeat;
     background-position:  center 80px; 
     background-size: fixed;
     background-color:rgb(224,224,224)

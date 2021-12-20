@@ -2,6 +2,7 @@
 session_start();
 $username="";
 $username = $_SESSION['username'];
+echo $username;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,7 +148,15 @@ $username = $_SESSION['username'];
       </div>
       <div class="gap-100"></div>
       <div class="action-register">
-        <button class="btn-more">ĐĂNG KÍ NGAY</button>
+      
+          <?php
+          if($username=='')
+          echo '<button class="btn-more"> <a href="dangnhap.php">ĐĂNG KÍ NGAY </a></button>';
+          else
+          {
+            echo '<button class="btn-more"> <a href="../php_xuly/dangky_kh.php">ĐĂNG KÍ NGAY </a></button>';
+          }
+          ?>
         <h3 class="time-register">Hạn đăng ký: 14 ngày 03 giờ 54:08 </h3>
       </div>
     </div>

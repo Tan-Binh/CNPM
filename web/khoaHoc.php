@@ -111,7 +111,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
 
-          <button class="btn-more"><a href="./course-2.html">Xem chi tiết</a></button>
+          <button class="btn-more"><a href="./course-2.php">Xem chi tiết</a></button>
           <div class="gap-20"></div>
         </div>
         <div class="course">
@@ -144,7 +144,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
 
-          <button class="btn-more"><a href="./course-2.html">Xem chi tiết</a></button>
+          <button class="btn-more"><a href="./course-2.php">Xem chi tiết</a></button>
           <div class="gap-20"></div>
         </div>
         <div class="course">
@@ -177,7 +177,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
 
-          <button class="btn-more"><a href="./course-2.html">Xem chi tiết</a></button>
+          <button class="btn-more"><a href="./course-2.php">Xem chi tiết</a></button>
           <div class="gap-20"></div>
         </div>
         <div class="course">
