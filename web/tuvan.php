@@ -118,8 +118,8 @@ $username = $_SESSION['username'];
                   {
                      $thongbao="Cảm ơn bạn đã liên hệ";
                   }
-                  echo '<span style="color: #F52000; font-weight:bold;
-                  padding-left:35%;font-size:20px;">'.$thongbao.'</span>';
+                  echo '<span style="color: #EF224B; font-weight:bold;
+                  padding-left:30%;font-size:20px;">'.$thongbao.'</span>';
     ?>
     
     </div>
